@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141D990023EE56DF002BF237 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141D98FF23EE56DF002BF237 /* LoginView.swift */; };
 		14F02E6123E5252F00277B4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F02E6023E5252F00277B4B /* AppDelegate.swift */; };
 		14F02E6323E5252F00277B4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F02E6223E5252F00277B4B /* SceneDelegate.swift */; };
 		14F02E6523E5252F00277B4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F02E6423E5252F00277B4B /* ViewController.swift */; };
 		14F02E6823E5252F00277B4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F02E6623E5252F00277B4B /* Main.storyboard */; };
 		14F02E6A23E5253300277B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F02E6923E5253300277B4B /* Assets.xcassets */; };
 		14F02E6D23E5253300277B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F02E6B23E5253300277B4B /* LaunchScreen.storyboard */; };
+		F7E88F0AFA4F6418DFF9A17D /* Pods_KINCLE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA704F0A0EB6F887B91B3BAB /* Pods_KINCLE.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141D98FF23EE56DF002BF237 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		14F02E5D23E5252F00277B4B /* KINCLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KINCLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F02E6023E5252F00277B4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F02E6223E5252F00277B4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		14F02E6923E5253300277B4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14F02E6C23E5253300277B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14F02E6E23E5253300277B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AA91EDDD8B3FFA26A5E4844 /* Pods-KINCLE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KINCLE.release.xcconfig"; path = "Target Support Files/Pods-KINCLE/Pods-KINCLE.release.xcconfig"; sourceTree = "<group>"; };
+		AA704F0A0EB6F887B91B3BAB /* Pods_KINCLE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KINCLE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8B51748632EDBFC08BDB20E /* Pods-KINCLE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KINCLE.debug.xcconfig"; path = "Target Support Files/Pods-KINCLE/Pods-KINCLE.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7E88F0AFA4F6418DFF9A17D /* Pods_KINCLE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12AE47483F870229D1D31134 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA704F0A0EB6F887B91B3BAB /* Pods_KINCLE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		14F02E5423E5252F00277B4B = {
 			isa = PBXGroup;
 			children = (
 				14F02E5F23E5252F00277B4B /* KINCLE */,
 				14F02E5E23E5252F00277B4B /* Products */,
+				626E56B163D0EC594BB873B3 /* Pods */,
+				12AE47483F870229D1D31134 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +75,7 @@
 			children = (
 				14F02E6023E5252F00277B4B /* AppDelegate.swift */,
 				14F02E6223E5252F00277B4B /* SceneDelegate.swift */,
+				141D98FF23EE56DF002BF237 /* LoginView.swift */,
 				14F02E6423E5252F00277B4B /* ViewController.swift */,
 				14F02E6623E5252F00277B4B /* Main.storyboard */,
 				14F02E6923E5253300277B4B /* Assets.xcassets */,
@@ -67,6 +85,16 @@
 			path = KINCLE;
 			sourceTree = "<group>";
 		};
+		626E56B163D0EC594BB873B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8B51748632EDBFC08BDB20E /* Pods-KINCLE.debug.xcconfig */,
+				1AA91EDDD8B3FFA26A5E4844 /* Pods-KINCLE.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14F02E7123E5253300277B4B /* Build configuration list for PBXNativeTarget "KINCLE" */;
 			buildPhases = (
+				807765E5150AE820AEC64565 /* [CP] Check Pods Manifest.lock */,
 				14F02E5923E5252F00277B4B /* Sources */,
 				14F02E5A23E5252F00277B4B /* Frameworks */,
 				14F02E5B23E5252F00277B4B /* Resources */,
@@ -133,6 +162,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		807765E5150AE820AEC64565 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KINCLE-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		14F02E5923E5252F00277B4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +194,7 @@
 			files = (
 				14F02E6523E5252F00277B4B /* ViewController.swift in Sources */,
 				14F02E6123E5252F00277B4B /* AppDelegate.swift in Sources */,
+				141D990023EE56DF002BF237 /* LoginView.swift in Sources */,
 				14F02E6323E5252F00277B4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +337,7 @@
 		};
 		14F02E7223E5253300277B4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8B51748632EDBFC08BDB20E /* Pods-KINCLE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +355,7 @@
 		};
 		14F02E7323E5253300277B4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AA91EDDD8B3FFA26A5E4844 /* Pods-KINCLE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
