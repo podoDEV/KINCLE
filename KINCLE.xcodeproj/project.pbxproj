@@ -91,7 +91,6 @@
 				E8B51748632EDBFC08BDB20E /* Pods-KINCLE.debug.xcconfig */,
 				1AA91EDDD8B3FFA26A5E4844 /* Pods-KINCLE.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -106,6 +105,7 @@
 				14F02E5923E5252F00277B4B /* Sources */,
 				14F02E5A23E5252F00277B4B /* Frameworks */,
 				14F02E5B23E5252F00277B4B /* Resources */,
+				141D990123EE5BF2002BF237 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -163,6 +163,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		141D990123EE5BF2002BF237 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 		807765E5150AE820AEC64565 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
