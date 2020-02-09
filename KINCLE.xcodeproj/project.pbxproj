@@ -94,8 +94,8 @@
 			children = (
 				141D98FF23EE56DF002BF237 /* LoginView.swift */,
 				14F02E6E23E5253300277B4B /* Info.plist */,
-				1488994023EFEEEB003711C4 /* Resources */,
 				1488994123EFEF12003711C4 /* Supporting Files */,
+				1488994023EFEEEB003711C4 /* Resources */,
 			);
 			path = KINCLE;
 			sourceTree = "<group>";
