@@ -19,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		141D98FF23EE56DF002BF237 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1488993F23EFE1DA003711C4 /* KINCLE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KINCLE.entitlements; sourceTree = "<group>"; };
 		14F02E5D23E5252F00277B4B /* KINCLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KINCLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F02E6023E5252F00277B4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F02E6223E5252F00277B4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		14F02E5F23E5252F00277B4B /* KINCLE */ = {
 			isa = PBXGroup;
 			children = (
+				1488993F23EFE1DA003711C4 /* KINCLE.entitlements */,
 				14F02E6023E5252F00277B4B /* AppDelegate.swift */,
 				14F02E6223E5252F00277B4B /* SceneDelegate.swift */,
 				141D98FF23EE56DF002BF237 /* LoginView.swift */,
@@ -357,7 +359,9 @@
 			baseConfigurationReference = E8B51748632EDBFC08BDB20E /* Pods-KINCLE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KINCLE/KINCLE.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BD2FZATPN;
 				INFOPLIST_FILE = KINCLE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,7 +379,9 @@
 			baseConfigurationReference = 1AA91EDDD8B3FFA26A5E4844 /* Pods-KINCLE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KINCLE/KINCLE.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BD2FZATPN;
 				INFOPLIST_FILE = KINCLE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
