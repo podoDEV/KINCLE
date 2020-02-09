@@ -10,7 +10,6 @@
 		141D990023EE56DF002BF237 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141D98FF23EE56DF002BF237 /* LoginView.swift */; };
 		14F02E6123E5252F00277B4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F02E6023E5252F00277B4B /* AppDelegate.swift */; };
 		14F02E6323E5252F00277B4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F02E6223E5252F00277B4B /* SceneDelegate.swift */; };
-		14F02E6523E5252F00277B4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F02E6423E5252F00277B4B /* ViewController.swift */; };
 		14F02E6823E5252F00277B4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F02E6623E5252F00277B4B /* Main.storyboard */; };
 		14F02E6A23E5253300277B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F02E6923E5253300277B4B /* Assets.xcassets */; };
 		14F02E6D23E5253300277B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F02E6B23E5253300277B4B /* LaunchScreen.storyboard */; };
@@ -23,7 +22,6 @@
 		14F02E5D23E5252F00277B4B /* KINCLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KINCLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F02E6023E5252F00277B4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F02E6223E5252F00277B4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		14F02E6423E5252F00277B4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		14F02E6723E5252F00277B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14F02E6923E5253300277B4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14F02E6C23E5253300277B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +51,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1488994023EFEEEB003711C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14F02E6623E5252F00277B4B /* Main.storyboard */,
+				14F02E6B23E5253300277B4B /* LaunchScreen.storyboard */,
+				14F02E6923E5253300277B4B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1488994123EFEF12003711C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1488993F23EFE1DA003711C4 /* KINCLE.entitlements */,
+				14F02E6023E5252F00277B4B /* AppDelegate.swift */,
+				14F02E6223E5252F00277B4B /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		14F02E5423E5252F00277B4B = {
 			isa = PBXGroup;
 			children = (
@@ -74,15 +92,10 @@
 		14F02E5F23E5252F00277B4B /* KINCLE */ = {
 			isa = PBXGroup;
 			children = (
-				1488993F23EFE1DA003711C4 /* KINCLE.entitlements */,
-				14F02E6023E5252F00277B4B /* AppDelegate.swift */,
-				14F02E6223E5252F00277B4B /* SceneDelegate.swift */,
 				141D98FF23EE56DF002BF237 /* LoginView.swift */,
-				14F02E6423E5252F00277B4B /* ViewController.swift */,
-				14F02E6623E5252F00277B4B /* Main.storyboard */,
-				14F02E6923E5253300277B4B /* Assets.xcassets */,
-				14F02E6B23E5253300277B4B /* LaunchScreen.storyboard */,
 				14F02E6E23E5253300277B4B /* Info.plist */,
+				1488994023EFEEEB003711C4 /* Resources */,
+				1488994123EFEF12003711C4 /* Supporting Files */,
 			);
 			path = KINCLE;
 			sourceTree = "<group>";
@@ -211,7 +224,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14F02E6523E5252F00277B4B /* ViewController.swift in Sources */,
 				14F02E6123E5252F00277B4B /* AppDelegate.swift in Sources */,
 				141D990023EE56DF002BF237 /* LoginView.swift in Sources */,
 				14F02E6323E5252F00277B4B /* SceneDelegate.swift in Sources */,
@@ -359,7 +371,7 @@
 			baseConfigurationReference = E8B51748632EDBFC08BDB20E /* Pods-KINCLE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = KINCLE/KINCLE.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "KINCLE/Supporting Files/KINCLE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BD2FZATPN;
 				INFOPLIST_FILE = KINCLE/Info.plist;
@@ -379,7 +391,7 @@
 			baseConfigurationReference = 1AA91EDDD8B3FFA26A5E4844 /* Pods-KINCLE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = KINCLE/KINCLE.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "KINCLE/Supporting Files/KINCLE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BD2FZATPN;
 				INFOPLIST_FILE = KINCLE/Info.plist;
