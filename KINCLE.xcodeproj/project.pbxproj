@@ -10,6 +10,9 @@
 		141D207223EFF2B600DD6B2B /* KINCLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141D207123EFF2B600DD6B2B /* KINCLETests.swift */; };
 		141D208023EFF2BE00DD6B2B /* KINCLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141D207F23EFF2BE00DD6B2B /* KINCLEUITests.swift */; };
 		141D990023EE56DF002BF237 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141D98FF23EE56DF002BF237 /* LoginView.swift */; };
+		14C4D80B23F78F5200AF3634 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C4D80A23F78F5200AF3634 /* ViewController.swift */; };
+		14E11428240A0C6D00712C5F /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E11427240A0C6D00712C5F /* TabBarView.swift */; };
+		14E1142A240A101B00712C5F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E11429240A101B00712C5F /* HomeView.swift */; };
 		14F02E6123E5252F00277B4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F02E6023E5252F00277B4B /* AppDelegate.swift */; };
 		14F02E6323E5252F00277B4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F02E6223E5252F00277B4B /* SceneDelegate.swift */; };
 		14F02E6823E5252F00277B4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F02E6623E5252F00277B4B /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 		141D208123EFF2BE00DD6B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		141D98FF23EE56DF002BF237 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1488993F23EFE1DA003711C4 /* KINCLE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KINCLE.entitlements; sourceTree = "<group>"; };
+		14C4D80A23F78F5200AF3634 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14E11427240A0C6D00712C5F /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		14E11429240A101B00712C5F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		14F02E5D23E5252F00277B4B /* KINCLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KINCLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F02E6023E5252F00277B4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F02E6223E5252F00277B4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +163,9 @@
 				14F02E6E23E5253300277B4B /* Info.plist */,
 				1488994123EFEF12003711C4 /* Supporting Files */,
 				1488994023EFEEEB003711C4 /* Resources */,
+				14C4D80A23F78F5200AF3634 /* ViewController.swift */,
+				14E11427240A0C6D00712C5F /* TabBarView.swift */,
+				14E11429240A101B00712C5F /* HomeView.swift */,
 			);
 			path = KINCLE;
 			sourceTree = "<group>";
@@ -363,6 +372,9 @@
 			files = (
 				14F02E6123E5252F00277B4B /* AppDelegate.swift in Sources */,
 				141D990023EE56DF002BF237 /* LoginView.swift in Sources */,
+				14C4D80B23F78F5200AF3634 /* ViewController.swift in Sources */,
+				14E1142A240A101B00712C5F /* HomeView.swift in Sources */,
+				14E11428240A0C6D00712C5F /* TabBarView.swift in Sources */,
 				14F02E6323E5252F00277B4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
