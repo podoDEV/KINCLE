@@ -7,226 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		141D207223EFF2B600DD6B2B /* KINCLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141D207123EFF2B600DD6B2B /* KINCLETests.swift */; };
-		141D208023EFF2BE00DD6B2B /* KINCLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141D207F23EFF2BE00DD6B2B /* KINCLEUITests.swift */; };
-		141D990023EE56DF002BF237 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141D98FF23EE56DF002BF237 /* LoginView.swift */; };
-		14C4D80B23F78F5200AF3634 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C4D80A23F78F5200AF3634 /* ViewController.swift */; };
-		14E11428240A0C6D00712C5F /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E11427240A0C6D00712C5F /* TabBarView.swift */; };
-		14E1142A240A101B00712C5F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E11429240A101B00712C5F /* HomeView.swift */; };
-		14F02E6123E5252F00277B4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F02E6023E5252F00277B4B /* AppDelegate.swift */; };
-		14F02E6323E5252F00277B4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F02E6223E5252F00277B4B /* SceneDelegate.swift */; };
-		14F02E6823E5252F00277B4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F02E6623E5252F00277B4B /* Main.storyboard */; };
-		14F02E6A23E5253300277B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F02E6923E5253300277B4B /* Assets.xcassets */; };
-		14F02E6D23E5253300277B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F02E6B23E5253300277B4B /* LaunchScreen.storyboard */; };
-		F7E88F0AFA4F6418DFF9A17D /* Pods_KINCLE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA704F0A0EB6F887B91B3BAB /* Pods_KINCLE.framework */; };
+		1469D1E72431E2AA00445236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1E62431E2AA00445236 /* AppDelegate.swift */; };
+		1469D1E92431E2AA00445236 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1E82431E2AA00445236 /* SceneDelegate.swift */; };
+		1469D1EB2431E2AA00445236 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1EA2431E2AA00445236 /* ViewController.swift */; };
+		1469D1EE2431E2AA00445236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1469D1EC2431E2AA00445236 /* Main.storyboard */; };
+		1469D1F02431E2AE00445236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1469D1EF2431E2AE00445236 /* Assets.xcassets */; };
+		1469D1F32431E2AE00445236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1469D1F12431E2AE00445236 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		141D207423EFF2B600DD6B2B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14F02E5523E5252F00277B4B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14F02E5C23E5252F00277B4B;
-			remoteInfo = KINCLE;
-		};
-		141D208223EFF2BE00DD6B2B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14F02E5523E5252F00277B4B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14F02E5C23E5252F00277B4B;
-			remoteInfo = KINCLE;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		141D206F23EFF2B600DD6B2B /* KINCLETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KINCLETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		141D207123EFF2B600DD6B2B /* KINCLETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KINCLETests.swift; sourceTree = "<group>"; };
-		141D207323EFF2B600DD6B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		141D207D23EFF2BE00DD6B2B /* KINCLEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KINCLEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		141D207F23EFF2BE00DD6B2B /* KINCLEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KINCLEUITests.swift; sourceTree = "<group>"; };
-		141D208123EFF2BE00DD6B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		141D98FF23EE56DF002BF237 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		1488993F23EFE1DA003711C4 /* KINCLE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KINCLE.entitlements; sourceTree = "<group>"; };
-		14C4D80A23F78F5200AF3634 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		14E11427240A0C6D00712C5F /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		14E11429240A101B00712C5F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		14F02E5D23E5252F00277B4B /* KINCLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KINCLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		14F02E6023E5252F00277B4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14F02E6223E5252F00277B4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		14F02E6723E5252F00277B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		14F02E6923E5253300277B4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		14F02E6C23E5253300277B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		14F02E6E23E5253300277B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1AA91EDDD8B3FFA26A5E4844 /* Pods-KINCLE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KINCLE.release.xcconfig"; path = "Target Support Files/Pods-KINCLE/Pods-KINCLE.release.xcconfig"; sourceTree = "<group>"; };
-		AA704F0A0EB6F887B91B3BAB /* Pods_KINCLE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KINCLE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8B51748632EDBFC08BDB20E /* Pods-KINCLE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KINCLE.debug.xcconfig"; path = "Target Support Files/Pods-KINCLE/Pods-KINCLE.debug.xcconfig"; sourceTree = "<group>"; };
+		1469D1E32431E2AA00445236 /* KINCLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KINCLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1469D1E62431E2AA00445236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1469D1E82431E2AA00445236 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1469D1EA2431E2AA00445236 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1469D1ED2431E2AA00445236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1469D1EF2431E2AE00445236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1469D1F22431E2AE00445236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1469D1F42431E2AE00445236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		141D206C23EFF2B600DD6B2B /* Frameworks */ = {
+		1469D1E02431E2AA00445236 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		141D207A23EFF2BE00DD6B2B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14F02E5A23E5252F00277B4B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7E88F0AFA4F6418DFF9A17D /* Pods_KINCLE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12AE47483F870229D1D31134 /* Frameworks */ = {
+		1469D1DA2431E2AA00445236 = {
 			isa = PBXGroup;
 			children = (
-				AA704F0A0EB6F887B91B3BAB /* Pods_KINCLE.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		141D207023EFF2B600DD6B2B /* KINCLETests */ = {
-			isa = PBXGroup;
-			children = (
-				141D207123EFF2B600DD6B2B /* KINCLETests.swift */,
-				141D207323EFF2B600DD6B2B /* Info.plist */,
-			);
-			path = KINCLETests;
-			sourceTree = "<group>";
-		};
-		141D207E23EFF2BE00DD6B2B /* KINCLEUITests */ = {
-			isa = PBXGroup;
-			children = (
-				141D207F23EFF2BE00DD6B2B /* KINCLEUITests.swift */,
-				141D208123EFF2BE00DD6B2B /* Info.plist */,
-			);
-			path = KINCLEUITests;
-			sourceTree = "<group>";
-		};
-		1488994023EFEEEB003711C4 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				14F02E6623E5252F00277B4B /* Main.storyboard */,
-				14F02E6B23E5253300277B4B /* LaunchScreen.storyboard */,
-				14F02E6923E5253300277B4B /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		1488994123EFEF12003711C4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1488993F23EFE1DA003711C4 /* KINCLE.entitlements */,
-				14F02E6023E5252F00277B4B /* AppDelegate.swift */,
-				14F02E6223E5252F00277B4B /* SceneDelegate.swift */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		14F02E5423E5252F00277B4B = {
-			isa = PBXGroup;
-			children = (
-				14F02E5F23E5252F00277B4B /* KINCLE */,
-				141D207023EFF2B600DD6B2B /* KINCLETests */,
-				141D207E23EFF2BE00DD6B2B /* KINCLEUITests */,
-				14F02E5E23E5252F00277B4B /* Products */,
-				626E56B163D0EC594BB873B3 /* Pods */,
-				12AE47483F870229D1D31134 /* Frameworks */,
+				1469D1E52431E2AA00445236 /* KINCLE */,
+				1469D1E42431E2AA00445236 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		14F02E5E23E5252F00277B4B /* Products */ = {
+		1469D1E42431E2AA00445236 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14F02E5D23E5252F00277B4B /* KINCLE.app */,
-				141D206F23EFF2B600DD6B2B /* KINCLETests.xctest */,
-				141D207D23EFF2BE00DD6B2B /* KINCLEUITests.xctest */,
+				1469D1E32431E2AA00445236 /* KINCLE.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		14F02E5F23E5252F00277B4B /* KINCLE */ = {
+		1469D1E52431E2AA00445236 /* KINCLE */ = {
 			isa = PBXGroup;
 			children = (
-				141D98FF23EE56DF002BF237 /* LoginView.swift */,
-				14F02E6E23E5253300277B4B /* Info.plist */,
-				1488994123EFEF12003711C4 /* Supporting Files */,
-				1488994023EFEEEB003711C4 /* Resources */,
-				14C4D80A23F78F5200AF3634 /* ViewController.swift */,
-				14E11427240A0C6D00712C5F /* TabBarView.swift */,
-				14E11429240A101B00712C5F /* HomeView.swift */,
+				1469D1E62431E2AA00445236 /* AppDelegate.swift */,
+				1469D1E82431E2AA00445236 /* SceneDelegate.swift */,
+				1469D1EA2431E2AA00445236 /* ViewController.swift */,
+				1469D1EC2431E2AA00445236 /* Main.storyboard */,
+				1469D1EF2431E2AE00445236 /* Assets.xcassets */,
+				1469D1F12431E2AE00445236 /* LaunchScreen.storyboard */,
+				1469D1F42431E2AE00445236 /* Info.plist */,
 			);
 			path = KINCLE;
-			sourceTree = "<group>";
-		};
-		626E56B163D0EC594BB873B3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E8B51748632EDBFC08BDB20E /* Pods-KINCLE.debug.xcconfig */,
-				1AA91EDDD8B3FFA26A5E4844 /* Pods-KINCLE.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		141D206E23EFF2B600DD6B2B /* KINCLETests */ = {
+		1469D1E22431E2AA00445236 /* KINCLE */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 141D207823EFF2B600DD6B2B /* Build configuration list for PBXNativeTarget "KINCLETests" */;
+			buildConfigurationList = 1469D1F72431E2AE00445236 /* Build configuration list for PBXNativeTarget "KINCLE" */;
 			buildPhases = (
-				141D206B23EFF2B600DD6B2B /* Sources */,
-				141D206C23EFF2B600DD6B2B /* Frameworks */,
-				141D206D23EFF2B600DD6B2B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				141D207523EFF2B600DD6B2B /* PBXTargetDependency */,
-			);
-			name = KINCLETests;
-			productName = KINCLETests;
-			productReference = 141D206F23EFF2B600DD6B2B /* KINCLETests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		141D207C23EFF2BE00DD6B2B /* KINCLEUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 141D208423EFF2BE00DD6B2B /* Build configuration list for PBXNativeTarget "KINCLEUITests" */;
-			buildPhases = (
-				141D207923EFF2BE00DD6B2B /* Sources */,
-				141D207A23EFF2BE00DD6B2B /* Frameworks */,
-				141D207B23EFF2BE00DD6B2B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				141D208323EFF2BE00DD6B2B /* PBXTargetDependency */,
-			);
-			name = KINCLEUITests;
-			productName = KINCLEUITests;
-			productReference = 141D207D23EFF2BE00DD6B2B /* KINCLEUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		14F02E5C23E5252F00277B4B /* KINCLE */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 14F02E7123E5253300277B4B /* Build configuration list for PBXNativeTarget "KINCLE" */;
-			buildPhases = (
-				807765E5150AE820AEC64565 /* [CP] Check Pods Manifest.lock */,
-				14F02E5923E5252F00277B4B /* Sources */,
-				14F02E5A23E5252F00277B4B /* Frameworks */,
-				14F02E5B23E5252F00277B4B /* Resources */,
-				141D990123EE5BF2002BF237 /* ShellScript */,
+				1469D1DF2431E2AA00445236 /* Sources */,
+				1469D1E02431E2AA00445236 /* Frameworks */,
+				1469D1E12431E2AA00445236 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -234,33 +84,25 @@
 			);
 			name = KINCLE;
 			productName = KINCLE;
-			productReference = 14F02E5D23E5252F00277B4B /* KINCLE.app */;
+			productReference = 1469D1E32431E2AA00445236 /* KINCLE.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		14F02E5523E5252F00277B4B /* Project object */ = {
+		1469D1DB2431E2AA00445236 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Zedd;
 				TargetAttributes = {
-					141D206E23EFF2B600DD6B2B = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 14F02E5C23E5252F00277B4B;
-					};
-					141D207C23EFF2BE00DD6B2B = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 14F02E5C23E5252F00277B4B;
-					};
-					14F02E5C23E5252F00277B4B = {
-						CreatedOnToolsVersion = 11.3.1;
+					1469D1E22431E2AA00445236 = {
+						CreatedOnToolsVersion = 11.4;
 					};
 				};
 			};
-			buildConfigurationList = 14F02E5823E5252F00277B4B /* Build configuration list for PBXProject "KINCLE" */;
+			buildConfigurationList = 1469D1DE2431E2AA00445236 /* Build configuration list for PBXProject "KINCLE" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -268,145 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 14F02E5423E5252F00277B4B;
-			productRefGroup = 14F02E5E23E5252F00277B4B /* Products */;
+			mainGroup = 1469D1DA2431E2AA00445236;
+			productRefGroup = 1469D1E42431E2AA00445236 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14F02E5C23E5252F00277B4B /* KINCLE */,
-				141D206E23EFF2B600DD6B2B /* KINCLETests */,
-				141D207C23EFF2BE00DD6B2B /* KINCLEUITests */,
+				1469D1E22431E2AA00445236 /* KINCLE */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		141D206D23EFF2B600DD6B2B /* Resources */ = {
+		1469D1E12431E2AA00445236 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		141D207B23EFF2BE00DD6B2B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14F02E5B23E5252F00277B4B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14F02E6D23E5253300277B4B /* LaunchScreen.storyboard in Resources */,
-				14F02E6A23E5253300277B4B /* Assets.xcassets in Resources */,
-				14F02E6823E5252F00277B4B /* Main.storyboard in Resources */,
+				1469D1F32431E2AE00445236 /* LaunchScreen.storyboard in Resources */,
+				1469D1F02431E2AE00445236 /* Assets.xcassets in Resources */,
+				1469D1EE2431E2AA00445236 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		141D990123EE5BF2002BF237 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
-		};
-		807765E5150AE820AEC64565 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KINCLE-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		141D206B23EFF2B600DD6B2B /* Sources */ = {
+		1469D1DF2431E2AA00445236 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				141D207223EFF2B600DD6B2B /* KINCLETests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		141D207923EFF2BE00DD6B2B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				141D208023EFF2BE00DD6B2B /* KINCLEUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14F02E5923E5252F00277B4B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14F02E6123E5252F00277B4B /* AppDelegate.swift in Sources */,
-				141D990023EE56DF002BF237 /* LoginView.swift in Sources */,
-				14C4D80B23F78F5200AF3634 /* ViewController.swift in Sources */,
-				14E1142A240A101B00712C5F /* HomeView.swift in Sources */,
-				14E11428240A0C6D00712C5F /* TabBarView.swift in Sources */,
-				14F02E6323E5252F00277B4B /* SceneDelegate.swift in Sources */,
+				1469D1EB2431E2AA00445236 /* ViewController.swift in Sources */,
+				1469D1E72431E2AA00445236 /* AppDelegate.swift in Sources */,
+				1469D1E92431E2AA00445236 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		141D207523EFF2B600DD6B2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14F02E5C23E5252F00277B4B /* KINCLE */;
-			targetProxy = 141D207423EFF2B600DD6B2B /* PBXContainerItemProxy */;
-		};
-		141D208323EFF2BE00DD6B2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14F02E5C23E5252F00277B4B /* KINCLE */;
-			targetProxy = 141D208223EFF2BE00DD6B2B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		14F02E6623E5252F00277B4B /* Main.storyboard */ = {
+		1469D1EC2431E2AA00445236 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				14F02E6723E5252F00277B4B /* Base */,
+				1469D1ED2431E2AA00445236 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		14F02E6B23E5253300277B4B /* LaunchScreen.storyboard */ = {
+		1469D1F12431E2AE00445236 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				14F02E6C23E5253300277B4B /* Base */,
+				1469D1F22431E2AE00445236 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -414,81 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		141D207623EFF2B600DD6B2B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KINCLETests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Zedd.KINCLETests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KINCLE.app/KINCLE";
-			};
-			name = Debug;
-		};
-		141D207723EFF2B600DD6B2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KINCLETests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Zedd.KINCLETests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KINCLE.app/KINCLE";
-			};
-			name = Release;
-		};
-		141D208523EFF2BE00DD6B2B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KINCLEUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Zedd.KINCLEUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KINCLE;
-			};
-			name = Debug;
-		};
-		141D208623EFF2BE00DD6B2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KINCLEUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Zedd.KINCLEUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KINCLE;
-			};
-			name = Release;
-		};
-		14F02E6F23E5253300277B4B /* Debug */ = {
+		1469D1F52431E2AE00445236 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -538,7 +216,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -548,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		14F02E7023E5253300277B4B /* Release */ = {
+		1469D1F62431E2AE00445236 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -592,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -602,12 +280,10 @@
 			};
 			name = Release;
 		};
-		14F02E7223E5253300277B4B /* Debug */ = {
+		1469D1F82431E2AE00445236 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8B51748632EDBFC08BDB20E /* Pods-KINCLE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "KINCLE/Supporting Files/KINCLE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BD2FZATPN;
 				INFOPLIST_FILE = KINCLE/Info.plist;
@@ -615,19 +291,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Zedd.KINCLE;
+				PRODUCT_BUNDLE_IDENTIFIER = com.podo.kincle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		14F02E7323E5253300277B4B /* Release */ = {
+		1469D1F92431E2AE00445236 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AA91EDDD8B3FFA26A5E4844 /* Pods-KINCLE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "KINCLE/Supporting Files/KINCLE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BD2FZATPN;
 				INFOPLIST_FILE = KINCLE/Info.plist;
@@ -635,7 +309,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Zedd.KINCLE;
+				PRODUCT_BUNDLE_IDENTIFIER = com.podo.kincle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -645,43 +319,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		141D207823EFF2B600DD6B2B /* Build configuration list for PBXNativeTarget "KINCLETests" */ = {
+		1469D1DE2431E2AA00445236 /* Build configuration list for PBXProject "KINCLE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				141D207623EFF2B600DD6B2B /* Debug */,
-				141D207723EFF2B600DD6B2B /* Release */,
+				1469D1F52431E2AE00445236 /* Debug */,
+				1469D1F62431E2AE00445236 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		141D208423EFF2BE00DD6B2B /* Build configuration list for PBXNativeTarget "KINCLEUITests" */ = {
+		1469D1F72431E2AE00445236 /* Build configuration list for PBXNativeTarget "KINCLE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				141D208523EFF2BE00DD6B2B /* Debug */,
-				141D208623EFF2BE00DD6B2B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		14F02E5823E5252F00277B4B /* Build configuration list for PBXProject "KINCLE" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				14F02E6F23E5253300277B4B /* Debug */,
-				14F02E7023E5253300277B4B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		14F02E7123E5253300277B4B /* Build configuration list for PBXNativeTarget "KINCLE" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				14F02E7223E5253300277B4B /* Debug */,
-				14F02E7323E5253300277B4B /* Release */,
+				1469D1F82431E2AE00445236 /* Debug */,
+				1469D1F92431E2AE00445236 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 14F02E5523E5252F00277B4B /* Project object */;
+	rootObject = 1469D1DB2431E2AA00445236 /* Project object */;
 }

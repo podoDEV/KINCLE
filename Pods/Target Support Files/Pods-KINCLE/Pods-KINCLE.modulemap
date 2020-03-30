@@ -1,6 +1,0 @@
-framework module Pods_KINCLE {
-  umbrella header "Pods-KINCLE-umbrella.h"
-
-  export *
-  module * { export * }
-}
