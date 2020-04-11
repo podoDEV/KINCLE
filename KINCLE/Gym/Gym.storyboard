@@ -16,10 +16,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pMy-Tg-P65">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <view contentMode="scaleToFill" id="aaW-2k-YUk">
+                                <rect key="frame" x="0.0" y="326" width="414" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favoriteGymHeader" translatesAutoresizingMaskIntoConstraints="NO" id="jsw-pd-kaP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tIm-NY-gxe">
+                                        <rect key="frame" x="119" y="98" width="176" height="48.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐겨찾는 암장을 등록하고 즐겨보세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fel-ha-7Ka">
+                                                <rect key="frame" x="0.0" y="0.0" width="176" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐겨찾는 암장" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv6-sw-BBd">
+                                                <rect key="frame" x="0.0" y="19.5" width="176" height="29"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyA-GI-8ot">
+                                        <rect key="frame" x="166" y="164.5" width="82" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="82" id="Efg-kg-wth"/>
+                                            <constraint firstAttribute="height" constant="30" id="TNh-pU-rFg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <state key="normal" title="암장 찾아보기">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wo8-hE-BK0">
+                                <constraints>
+                                    <constraint firstItem="jsw-pd-kaP" firstAttribute="top" secondItem="aaW-2k-YUk" secondAttribute="top" id="3Oy-c0-KS4"/>
+                                    <constraint firstItem="tIm-NY-gxe" firstAttribute="centerY" secondItem="aaW-2k-YUk" secondAttribute="centerY" id="8C0-uf-3qW"/>
+                                    <constraint firstItem="hyA-GI-8ot" firstAttribute="top" secondItem="tIm-NY-gxe" secondAttribute="bottom" constant="18" id="EH2-M2-ykL"/>
+                                    <constraint firstAttribute="bottom" secondItem="jsw-pd-kaP" secondAttribute="bottom" id="Ht3-Bt-54c"/>
+                                    <constraint firstItem="jsw-pd-kaP" firstAttribute="leading" secondItem="aaW-2k-YUk" secondAttribute="leading" id="K5Y-Ff-nvT"/>
+                                    <constraint firstItem="tIm-NY-gxe" firstAttribute="centerX" secondItem="aaW-2k-YUk" secondAttribute="centerX" id="a1d-Te-SzY"/>
+                                    <constraint firstAttribute="trailing" secondItem="jsw-pd-kaP" secondAttribute="trailing" id="dLK-bl-GxG"/>
+                                    <constraint firstItem="hyA-GI-8ot" firstAttribute="centerX" secondItem="aaW-2k-YUk" secondAttribute="centerX" id="mEc-Tw-o6T"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pMy-Tg-P65">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wo8-hE-BK0" customClass="StretchableCollectionViewFlowLayout" customModule="KINCLE" customModuleProvider="target">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="50" height="236"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -35,65 +83,61 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reusableView" id="ODD-Vk-ffb">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavoriteGymHeaderReusableView" id="ODD-Vk-ffb" customClass="FavoriteGymHeaderReusableView" customModule="KINCLE" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="236"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" id="aaW-2k-YUk">
-                                            <rect key="frame" x="0.0" y="-4" width="414" height="244"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favoriteGymHeader" translatesAutoresizingMaskIntoConstraints="NO" id="KVa-Xm-Jap">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="236"/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Q5s-Ri-Vbi">
+                                            <rect key="frame" x="82.5" y="94.5" width="249" height="47"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favoriteGymHeader" translatesAutoresizingMaskIntoConstraints="NO" id="jsw-pd-kaP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tIm-NY-gxe">
-                                                    <rect key="frame" x="119" y="98" width="176" height="48.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="즐겨찾는 암장을 등록하고 즐겨보세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fel-ha-7Ka">
-                                                            <rect key="frame" x="0.0" y="0.0" width="176" height="14.5"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                                            <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="즐겨찾는 암장" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv6-sw-BBd">
-                                                            <rect key="frame" x="0.0" y="19.5" width="176" height="29"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyA-GI-8ot">
-                                                    <rect key="frame" x="166" y="164.5" width="82" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="82" id="Efg-kg-wth"/>
-                                                        <constraint firstAttribute="height" constant="30" id="TNh-pU-rFg"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                    <state key="normal" title="암장 찾아보기">
-                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    </state>
-                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐겨찾는 암장을 등록하고 즐겨보세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSS-wp-zlB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="249" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐겨찾는 암장" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1j-Qh-s24">
+                                                    <rect key="frame" x="0.0" y="26.5" width="249" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MU1-Eh-L31">
+                                            <rect key="frame" x="166" y="151.5" width="82" height="30"/>
                                             <constraints>
-                                                <constraint firstItem="jsw-pd-kaP" firstAttribute="top" secondItem="aaW-2k-YUk" secondAttribute="top" id="3Oy-c0-KS4"/>
-                                                <constraint firstItem="tIm-NY-gxe" firstAttribute="centerY" secondItem="aaW-2k-YUk" secondAttribute="centerY" id="8C0-uf-3qW"/>
-                                                <constraint firstItem="hyA-GI-8ot" firstAttribute="top" secondItem="tIm-NY-gxe" secondAttribute="bottom" constant="18" id="EH2-M2-ykL"/>
-                                                <constraint firstAttribute="bottom" secondItem="jsw-pd-kaP" secondAttribute="bottom" id="Ht3-Bt-54c"/>
-                                                <constraint firstItem="jsw-pd-kaP" firstAttribute="leading" secondItem="aaW-2k-YUk" secondAttribute="leading" id="K5Y-Ff-nvT"/>
-                                                <constraint firstItem="tIm-NY-gxe" firstAttribute="centerX" secondItem="aaW-2k-YUk" secondAttribute="centerX" id="a1d-Te-SzY"/>
-                                                <constraint firstAttribute="trailing" secondItem="jsw-pd-kaP" secondAttribute="trailing" id="dLK-bl-GxG"/>
-                                                <constraint firstItem="hyA-GI-8ot" firstAttribute="centerX" secondItem="aaW-2k-YUk" secondAttribute="centerX" id="mEc-Tw-o6T"/>
+                                                <constraint firstAttribute="width" constant="82" id="N6U-U9-zjh"/>
+                                                <constraint firstAttribute="height" constant="30" id="vqR-f7-im7"/>
                                             </constraints>
-                                        </view>
+                                            <state key="normal" title="암장 찾기"/>
+                                        </button>
                                     </subviews>
+                                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="KVa-Xm-Jap" secondAttribute="bottom" id="59d-AT-65x"/>
+                                        <constraint firstItem="Q5s-Ri-Vbi" firstAttribute="centerX" secondItem="ODD-Vk-ffb" secondAttribute="centerX" id="CS1-ax-Jn9"/>
+                                        <constraint firstAttribute="trailing" secondItem="KVa-Xm-Jap" secondAttribute="trailing" id="GLn-4y-u6O"/>
+                                        <constraint firstItem="KVa-Xm-Jap" firstAttribute="top" secondItem="ODD-Vk-ffb" secondAttribute="top" id="IzO-uV-b9j"/>
+                                        <constraint firstItem="Q5s-Ri-Vbi" firstAttribute="centerY" secondItem="ODD-Vk-ffb" secondAttribute="centerY" id="VHs-Ai-SjO"/>
+                                        <constraint firstItem="MU1-Eh-L31" firstAttribute="centerX" secondItem="ODD-Vk-ffb" secondAttribute="centerX" id="cvw-KE-0cJ"/>
+                                        <constraint firstItem="KVa-Xm-Jap" firstAttribute="leading" secondItem="ODD-Vk-ffb" secondAttribute="leading" id="koa-Tn-aXG"/>
+                                        <constraint firstItem="MU1-Eh-L31" firstAttribute="top" secondItem="Q5s-Ri-Vbi" secondAttribute="bottom" constant="10" id="mvx-Zu-2hS"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="findGymButton" destination="MU1-Eh-L31" id="3cc-01-JEW"/>
+                                        <outlet property="subtitleLabel" destination="PSS-wp-zlB" id="yTO-Lw-yaC"/>
+                                        <outlet property="titleLabel" destination="I1j-Qh-s24" id="bmK-I5-KWB"/>
+                                    </connections>
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pMy-Tg-P65" firstAttribute="top" secondItem="Ygo-l3-gju" secondAttribute="top" id="1Lv-Ek-a0x"/>
+                            <constraint firstItem="pMy-Tg-P65" firstAttribute="top" secondItem="Oat-VR-SBB" secondAttribute="top" id="1Lv-Ek-a0x"/>
                             <constraint firstItem="Ygo-l3-gju" firstAttribute="bottom" secondItem="pMy-Tg-P65" secondAttribute="bottom" id="A5T-x4-91G"/>
                             <constraint firstItem="pMy-Tg-P65" firstAttribute="leading" secondItem="Ygo-l3-gju" secondAttribute="leading" id="fHy-Xl-a8e"/>
                             <constraint firstItem="Ygo-l3-gju" firstAttribute="trailing" secondItem="pMy-Tg-P65" secondAttribute="trailing" id="lbS-qo-sEB"/>
