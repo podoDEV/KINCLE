@@ -10,8 +10,8 @@ import Foundation
 
 class Gym {
     
-    var name: String = ""
-    var address: String = ""
+    var name: String = "홍대 더클라임"
+    var address: String = "서울특별시 마포구 서교동 353 어쩌고 저쩌고"
     var mainImageURL: String?
-    var isFavorite: Bool = false
+    var isFavorite: Bool = true
 }
