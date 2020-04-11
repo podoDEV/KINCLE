@@ -80,14 +80,14 @@
 			children = (
 				1469D2862438380900445236 /* Model */,
 				1469D283243827F500445236 /* Extensions */,
-				1469D2002431E79D00445236 /* Resources */,
-				1469D1FF2431E76300445236 /* Supporting Files */,
+				14D574752441B14400DD96AA /* Root */,
 				1469D1FC2431E75600445236 /* Home */,
 				1469D1FD2431E75A00445236 /* Gym */,
 				1469D2802437876800445236 /* Crew */,
 				1469D1FE2431E76000445236 /* Profile */,
+				1469D2002431E79D00445236 /* Resources */,
+				1469D1FF2431E76300445236 /* Supporting Files */,
 				1469D1F42431E2AE00445236 /* Info.plist */,
-				1469D1FA2431E72700445236 /* MainTabViewController.swift */,
 			);
 			path = KINCLE;
 			sourceTree = "<group>";
@@ -161,6 +161,14 @@
 				1469D2872438381A00445236 /* Gym.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		14D574752441B14400DD96AA /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				1469D1FA2431E72700445236 /* MainTabViewController.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
