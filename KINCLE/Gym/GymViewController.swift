@@ -1,5 +1,6 @@
 
 import UIKit
+import SnapKit
 
 class FavoriteGymViewModel {
     
@@ -26,23 +27,51 @@ class GymViewController: UIViewController {
     func setupCollectionView() {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        self.collectionView.register(FavoriteGymCountCollectionViewCell.self, forCellWithReuseIdentifier: "FavoriteGymCountCollectionViewCell")
     }
 }
 
 extension GymViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    enum Section: Int, CaseIterable {
+        
+        case count
+        case gym
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return Section.allCases.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.viewModel.favoriteGyms.count
+        switch Section(rawValue: section)! {
+        case .count:
+            return 1
+        case .gym:
+            return self.viewModel.favoriteGyms.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteGymCollectionViewCell", for: indexPath) as! FavoriteGymCollectionViewCell
-        cell.configure(gym: self.viewModel.favoriteGyms[indexPath.item])
-        return cell
+        switch Section(rawValue: indexPath.section)! {
+        case .count:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteGymCountCollectionViewCell", for: indexPath) as! FavoriteGymCountCollectionViewCell
+            cell.configure(count: self.viewModel.favoriteGyms.count)
+            return cell
+        case .gym:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteGymCollectionViewCell", for: indexPath) as! FavoriteGymCollectionViewCell
+            cell.configure(gym: self.viewModel.favoriteGyms[indexPath.item])
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 16
+        switch Section(rawValue: section)! {
+        case .count:
+            return 0
+        case .gym:
+            return 16
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -50,7 +79,12 @@ extension GymViewController: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        switch Section(rawValue: section)! {
+        case .count:
+            return .zero
+        case .gym:
+            return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -64,15 +98,28 @@ extension GymViewController: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = (collectionView.frame.width - 15 - 32) / 2
-        let height: CGFloat = 200
+        let width: CGFloat
+        let height: CGFloat
+        switch Section(rawValue: indexPath.section)! {
+        case .count:
+            width = collectionView.frame.width
+            height = 48
+        case .gym:
+            width = (collectionView.frame.width - 15 - 32) / 2
+            height = 200
+        }
         return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        let width: CGFloat = collectionView.frame.width
-        let height: CGFloat = 244
-        return CGSize(width: width, height: height)
+        switch Section(rawValue: section)! {
+        case .count:
+            let width: CGFloat = collectionView.frame.width
+            let height: CGFloat = 244
+            return CGSize(width: width, height: height)
+        case .gym:
+            return .zero
+        }
     }
 }
 
@@ -107,6 +154,42 @@ class FavoriteGymHeaderReusableView: UICollectionReusableView {
     }
 }
 
+class FavoriteGymCountCollectionViewCell: UICollectionViewCell {
+    
+    weak var countLabel: UILabel?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupView() {
+        let label = UILabel()
+        label.text = "안녕"
+        self.countLabel = label
+        self.contentView.addSubview(label)
+        label.snp.makeConstraints {
+            $0.leading.trailing.equalTo(20)
+            $0.centerY.equalToSuperview()
+            
+        }
+    }
+    
+    func configure(count: Int) {
+        let title = "총 \(count)개의 암장"
+        let attributedText = NSMutableAttributedString(string: title, attributes: [
+            .font: UIFont.systemFont(ofSize: 13, weight: .light),
+            .foregroundColor: App.Color.titleText
+        ])
+        let range = (title as NSString).range(of: "\(count)")
+        attributedText.addAttribute(.font, value: UIFont.systemFont(ofSize: 13, weight: .bold), range: range)
+        self.countLabel?.attributedText = attributedText
+    }
+}
 class FavoriteGymCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var mainImageView: UIImageView!
