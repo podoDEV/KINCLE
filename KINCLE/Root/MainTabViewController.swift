@@ -30,8 +30,6 @@ class MainTabViewController: UITabBarController {
         viewController.tabBarItem = item
         return viewController
     }()
-
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -2,16 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Gym View Controller-->
+        <!--Favorite Gym View Controller-->
         <scene sceneID="GYz-UE-4nQ">
             <objects>
-                <viewController storyboardIdentifier="GymViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WOw-gL-iUN" customClass="GymViewController" customModule="KINCLE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteGymViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WOw-gL-iUN" customClass="FavoriteGymViewController" customModule="KINCLE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oat-VR-SBB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,8 +199,151 @@
             </objects>
             <point key="canvasLocation" x="-262.31884057971018" y="119.86607142857142"/>
         </scene>
+        <!--Gym View Controller-->
+        <scene sceneID="ECK-GM-Wwe">
+            <objects>
+                <viewController storyboardIdentifier="GymViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="81A-Ue-4ee" customClass="GymViewController" customModule="KINCLE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Yk-yd-bsB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_gym_image_large" translatesAutoresizingMaskIntoConstraints="NO" id="h4N-fG-qXz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="430" id="SSa-aV-SyI"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qO0-Wj-rka">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6a-D4-6kg">
+                                <rect key="frame" x="20" y="306" width="374" height="104"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlT-dO-L36">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
+                                        <string key="text">마포구 최고의 시설을 갖춘
+홍대 더클라임입니다</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uT1-4j-WQR">
+                                        <rect key="frame" x="0.0" y="57" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yav-4y-6Df">
+                                                <rect key="frame" x="0.0" y="0.0" width="29.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3P0-37-3og">
+                                                <rect key="frame" x="29.5" y="0.0" width="344.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mkp-Bx-EnC">
+                                        <rect key="frame" x="0.0" y="83.5" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="운영시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYa-cF-DUe">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaj-8F-oop">
+                                                <rect key="frame" x="59" y="0.0" width="315" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="uT1-4j-WQR" firstAttribute="leading" secondItem="L6a-D4-6kg" secondAttribute="leading" id="C58-oN-fkj"/>
+                                    <constraint firstItem="PlT-dO-L36" firstAttribute="leading" secondItem="L6a-D4-6kg" secondAttribute="leading" id="MCT-QA-Wsg"/>
+                                    <constraint firstAttribute="trailing" secondItem="uT1-4j-WQR" secondAttribute="trailing" id="N0G-QG-xib"/>
+                                    <constraint firstAttribute="trailing" secondItem="PlT-dO-L36" secondAttribute="trailing" id="Psr-t3-Um7"/>
+                                    <constraint firstAttribute="trailing" secondItem="mkp-Bx-EnC" secondAttribute="trailing" id="bRc-ZE-6y2"/>
+                                    <constraint firstItem="PlT-dO-L36" firstAttribute="top" secondItem="L6a-D4-6kg" secondAttribute="top" id="bq1-J1-Hmc"/>
+                                    <constraint firstAttribute="bottom" secondItem="mkp-Bx-EnC" secondAttribute="bottom" id="gMQ-aP-jXe"/>
+                                    <constraint firstItem="mkp-Bx-EnC" firstAttribute="leading" secondItem="L6a-D4-6kg" secondAttribute="leading" id="sO9-fv-9VC"/>
+                                    <constraint firstItem="uT1-4j-WQR" firstAttribute="top" secondItem="PlT-dO-L36" secondAttribute="bottom" constant="16" id="uXT-cO-sa3"/>
+                                    <constraint firstItem="mkp-Bx-EnC" firstAttribute="top" secondItem="uT1-4j-WQR" secondAttribute="bottom" constant="6" id="vFw-zN-das"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WJ9-I7-jLH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WJ9-I7-jLH" firstAttribute="top" secondItem="fwk-Ru-rhY" secondAttribute="top" constant="44" id="2rZ-s5-Nwf"/>
+                            <constraint firstItem="fwk-Ru-rhY" firstAttribute="bottom" secondItem="WJ9-I7-jLH" secondAttribute="bottom" id="IB4-ZG-yGZ"/>
+                            <constraint firstItem="qO0-Wj-rka" firstAttribute="top" secondItem="h4N-fG-qXz" secondAttribute="top" id="J6a-kV-6uM"/>
+                            <constraint firstItem="fwk-Ru-rhY" firstAttribute="trailing" secondItem="WJ9-I7-jLH" secondAttribute="trailing" id="JeC-aZ-PZo"/>
+                            <constraint firstItem="h4N-fG-qXz" firstAttribute="leading" secondItem="fwk-Ru-rhY" secondAttribute="leading" id="Jus-Fd-Fov"/>
+                            <constraint firstItem="WJ9-I7-jLH" firstAttribute="leading" secondItem="fwk-Ru-rhY" secondAttribute="leading" id="SUB-e0-0Kd"/>
+                            <constraint firstItem="qO0-Wj-rka" firstAttribute="bottom" secondItem="h4N-fG-qXz" secondAttribute="bottom" id="XgX-3w-J7y"/>
+                            <constraint firstItem="L6a-D4-6kg" firstAttribute="leading" secondItem="fwk-Ru-rhY" secondAttribute="leading" constant="20" id="Y1I-oM-4D4"/>
+                            <constraint firstItem="fwk-Ru-rhY" firstAttribute="trailing" secondItem="h4N-fG-qXz" secondAttribute="trailing" id="hHl-qh-8ub"/>
+                            <constraint firstItem="h4N-fG-qXz" firstAttribute="top" secondItem="9Yk-yd-bsB" secondAttribute="top" id="qpb-lx-VNr"/>
+                            <constraint firstItem="qO0-Wj-rka" firstAttribute="trailing" secondItem="h4N-fG-qXz" secondAttribute="trailing" id="rKb-uE-NOL"/>
+                            <constraint firstItem="fwk-Ru-rhY" firstAttribute="trailing" secondItem="L6a-D4-6kg" secondAttribute="trailing" constant="20" id="wCE-Kp-Z78"/>
+                            <constraint firstItem="qO0-Wj-rka" firstAttribute="leading" secondItem="h4N-fG-qXz" secondAttribute="leading" id="zSf-io-0Xf"/>
+                            <constraint firstItem="L6a-D4-6kg" firstAttribute="bottom" secondItem="h4N-fG-qXz" secondAttribute="bottom" constant="-20" id="zhr-5U-zm1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fwk-Ru-rhY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="3P0-37-3og" id="Ud9-Hz-SVx"/>
+                        <outlet property="dimmedView" destination="qO0-Wj-rka" id="b1s-pq-xbS"/>
+                        <outlet property="gymIntoduceLabel" destination="PlT-dO-L36" id="KgE-ZA-GXh"/>
+                        <outlet property="hoursLabel" destination="xaj-8F-oop" id="sUs-Jn-ubi"/>
+                        <outlet property="infoContainerView" destination="L6a-D4-6kg" id="V5e-fb-kfh"/>
+                        <outlet property="tableView" destination="WJ9-I7-jLH" id="fNJ-y7-bxT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgH-nM-9f3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473.91304347826093" y="112.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zRw-gk-Vo9">
+            <objects>
+                <viewController id="qmF-oa-Z6f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pcd-mx-DhQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EA3-47-zxw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EA3-47-zxw" firstAttribute="top" secondItem="Ujb-1f-LP5" secondAttribute="top" id="8XM-Yw-bnj"/>
+                            <constraint firstItem="Ujb-1f-LP5" firstAttribute="bottom" secondItem="EA3-47-zxw" secondAttribute="bottom" id="Hva-xc-7VG"/>
+                            <constraint firstItem="Ujb-1f-LP5" firstAttribute="trailing" secondItem="EA3-47-zxw" secondAttribute="trailing" id="XtH-CW-5ud"/>
+                            <constraint firstItem="EA3-47-zxw" firstAttribute="leading" secondItem="Ujb-1f-LP5" secondAttribute="leading" id="vdt-kr-T40"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ujb-1f-LP5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="moM-Ky-k0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="112"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="default_gym_image_large" width="375" height="430"/>
         <image name="favoriteGymHeader" width="375" height="238"/>
         <image name="favorite_gym_on" width="24" height="24"/>
     </resources>

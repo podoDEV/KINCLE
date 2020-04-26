@@ -15,15 +15,18 @@
 		1469D1F32431E2AE00445236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1469D1F12431E2AE00445236 /* LaunchScreen.storyboard */; };
 		1469D1FB2431E72700445236 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1FA2431E72700445236 /* MainTabViewController.swift */; };
 		1469D2772437813600445236 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D2762437813600445236 /* HomeViewController.swift */; };
-		1469D2792437815000445236 /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D2782437815000445236 /* GymViewController.swift */; };
+		1469D2792437815000445236 /* FavoriteGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D2782437815000445236 /* FavoriteGymViewController.swift */; };
 		1469D27B2437841C00445236 /* CrewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D27A2437841C00445236 /* CrewViewController.swift */; };
 		1469D27D2437842600445236 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D27C2437842600445236 /* ProfileViewController.swift */; };
 		1469D2822437879600445236 /* Gym.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1469D2812437879600445236 /* Gym.storyboard */; };
 		1469D2852438280100445236 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D2842438280100445236 /* UIColor+.swift */; };
 		1469D2882438381A00445236 /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D2872438381A00445236 /* Gym.swift */; };
+		149C0C62244A9C9B005B4E19 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0C61244A9C9B005B4E19 /* ApiManager.swift */; };
+		149C0C64244AB0B7005B4E19 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0C63244AB0B7005B4E19 /* Response.swift */; };
 		14D5746F244160C800DD96AA /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D5746E244160C800DD96AA /* App.swift */; };
 		14D5747124418C0200DD96AA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D5747024418C0200DD96AA /* Profile.storyboard */; };
 		14D574742441AEE900DD96AA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14D574732441AEE900DD96AA /* SnapKit */; };
+		14D574D52442DD9E00DD96AA /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D574D42442DD9E00DD96AA /* GymViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,14 +40,17 @@
 		1469D1F42431E2AE00445236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1469D1FA2431E72700445236 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		1469D2762437813600445236 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1469D2782437815000445236 /* GymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
+		1469D2782437815000445236 /* FavoriteGymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGymViewController.swift; sourceTree = "<group>"; };
 		1469D27A2437841C00445236 /* CrewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewViewController.swift; sourceTree = "<group>"; };
 		1469D27C2437842600445236 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1469D2812437879600445236 /* Gym.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gym.storyboard; sourceTree = "<group>"; };
 		1469D2842438280100445236 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		1469D2872438381A00445236 /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
+		149C0C61244A9C9B005B4E19 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		149C0C63244AB0B7005B4E19 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		14D5746E244160C800DD96AA /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		14D5747024418C0200DD96AA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		14D574D42442DD9E00DD96AA /* GymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 		1469D1E52431E2AA00445236 /* KINCLE */ = {
 			isa = PBXGroup;
 			children = (
+				149C0C60244A9C8B005B4E19 /* Network */,
 				1469D2862438380900445236 /* Model */,
 				1469D283243827F500445236 /* Extensions */,
 				14D574752441B14400DD96AA /* Root */,
@@ -103,8 +110,9 @@
 		1469D1FD2431E75A00445236 /* Gym */ = {
 			isa = PBXGroup;
 			children = (
-				1469D2782437815000445236 /* GymViewController.swift */,
 				1469D2812437879600445236 /* Gym.storyboard */,
+				1469D2782437815000445236 /* FavoriteGymViewController.swift */,
+				14D574D42442DD9E00DD96AA /* GymViewController.swift */,
 			);
 			path = Gym;
 			sourceTree = "<group>";
@@ -161,6 +169,15 @@
 				1469D2872438381A00445236 /* Gym.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		149C0C60244A9C8B005B4E19 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				149C0C61244A9C9B005B4E19 /* ApiManager.swift */,
+				149C0C63244AB0B7005B4E19 /* Response.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		14D574752441B14400DD96AA /* Root */ = {
@@ -253,13 +270,16 @@
 				1469D2772437813600445236 /* HomeViewController.swift in Sources */,
 				1469D1EB2431E2AA00445236 /* ViewController.swift in Sources */,
 				14D5746F244160C800DD96AA /* App.swift in Sources */,
+				149C0C62244A9C9B005B4E19 /* ApiManager.swift in Sources */,
 				1469D1FB2431E72700445236 /* MainTabViewController.swift in Sources */,
 				1469D1E72431E2AA00445236 /* AppDelegate.swift in Sources */,
-				1469D2792437815000445236 /* GymViewController.swift in Sources */,
+				149C0C64244AB0B7005B4E19 /* Response.swift in Sources */,
+				1469D2792437815000445236 /* FavoriteGymViewController.swift in Sources */,
 				1469D2882438381A00445236 /* Gym.swift in Sources */,
 				1469D27B2437841C00445236 /* CrewViewController.swift in Sources */,
 				1469D27D2437842600445236 /* ProfileViewController.swift in Sources */,
 				1469D1E92431E2AA00445236 /* SceneDelegate.swift in Sources */,
+				14D574D52442DD9E00DD96AA /* GymViewController.swift in Sources */,
 				1469D2852438280100445236 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
