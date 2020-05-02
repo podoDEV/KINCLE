@@ -11,7 +11,7 @@ class MainTabViewController: UITabBarController {
     }()
     
     lazy var gymViewController: UIViewController = {
-        let viewController = GymViewController.create()
+        let viewController = ProblemViewController.create()
         let item = UITabBarItem(title: "암장", image: UIImage(named: "tab_gym"), selectedImage: nil)
         viewController.tabBarItem = item
         return viewController

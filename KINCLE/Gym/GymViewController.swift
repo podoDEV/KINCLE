@@ -46,30 +46,64 @@ class GymViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.contentInsetAdjustmentBehavior = .never
-        self.tableView.contentInset = UIEdgeInsets(top: 430, left: 0, bottom: 0, right: 0)
+        self.tableView.contentInset = UIEdgeInsets(top: 430 - 88, left: 0, bottom: 0, right: 0)
         self.tableView.backgroundColor = .clear
     }
 }
 
 extension GymViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    enum Section: Int, CaseIterable {
+        
+        case tab
+        case filter
+        case post
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return Section.allCases.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        switch Section(rawValue: section)! {
+        case .tab, .filter: return 1
+        case .post: return 30
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        switch Section(rawValue: indexPath.section)! {
+        case .tab:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "GymTabTableViewCell") as! GymTabTableViewCell
+            return cell
+        case .filter:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "GymCountFilterTableViewCell") as! GymCountFilterTableViewCell
+            return cell
+        case .post:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "GymPostTableViewCell") as! GymPostTableViewCell
+            return cell
+        }
     }
     
-   func scrollViewDidScroll(_ scrollView: UIScrollView) {
-         let offset = scrollView.contentOffset.y
-//
-//         if(offset > 200){
-//             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: 0)
-//         } else {
-//             self.headerView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: 200 - offset)
-//         }
-//
-//         let rect = CGRect(x: 0, y: self.headerView.frame.maxY, width: self.view.bounds.size.width, height: (self.tableView.bounds.size.height - (self.headerView.frame.maxY)))
-//            self.tableView.frame = rect
-     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch Section(rawValue: indexPath.section)! {
+        case .tab:
+            return 54
+        case .filter:
+            return 40
+        case .post:
+            return 241
+        }
+    }
+}
+class GymTabTableViewCell: UITableViewCell {
+    
+}
+
+class GymCountFilterTableViewCell: UITableViewCell {
+    
+}
+
+class GymPostTableViewCell: UITableViewCell {
+    
 }

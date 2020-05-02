@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140B08F2245D0EAE0042BDDD /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140B08F1245D0EAE0042BDDD /* ProblemViewController.swift */; };
+		140B08F4245D0EC90042BDDD /* Problem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140B08F3245D0EC90042BDDD /* Problem.storyboard */; };
 		1469D1E72431E2AA00445236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1E62431E2AA00445236 /* AppDelegate.swift */; };
 		1469D1E92431E2AA00445236 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1E82431E2AA00445236 /* SceneDelegate.swift */; };
 		1469D1EB2431E2AA00445236 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1EA2431E2AA00445236 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		140B08F1245D0EAE0042BDDD /* ProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemViewController.swift; sourceTree = "<group>"; };
+		140B08F3245D0EC90042BDDD /* Problem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Problem.storyboard; sourceTree = "<group>"; };
 		1469D1E32431E2AA00445236 /* KINCLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KINCLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1469D1E62431E2AA00445236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1469D1E82431E2AA00445236 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		140B08F0245D0E850042BDDD /* Problem */ = {
+			isa = PBXGroup;
+			children = (
+				140B08F3245D0EC90042BDDD /* Problem.storyboard */,
+				140B08F1245D0EAE0042BDDD /* ProblemViewController.swift */,
+			);
+			path = Problem;
+			sourceTree = "<group>";
+		};
 		1469D1DA2431E2AA00445236 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +97,7 @@
 		1469D1E52431E2AA00445236 /* KINCLE */ = {
 			isa = PBXGroup;
 			children = (
+				140B08F0245D0E850042BDDD /* Problem */,
 				149C0C60244A9C8B005B4E19 /* Network */,
 				1469D2862438380900445236 /* Model */,
 				1469D283243827F500445236 /* Extensions */,
@@ -252,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140B08F4245D0EC90042BDDD /* Problem.storyboard in Resources */,
 				1469D1F32431E2AE00445236 /* LaunchScreen.storyboard in Resources */,
 				1469D1F02431E2AE00445236 /* Assets.xcassets in Resources */,
 				14D5747124418C0200DD96AA /* Profile.storyboard in Resources */,
@@ -271,6 +286,7 @@
 				1469D1EB2431E2AA00445236 /* ViewController.swift in Sources */,
 				14D5746F244160C800DD96AA /* App.swift in Sources */,
 				149C0C62244A9C9B005B4E19 /* ApiManager.swift in Sources */,
+				140B08F2245D0EAE0042BDDD /* ProblemViewController.swift in Sources */,
 				1469D1FB2431E72700445236 /* MainTabViewController.swift in Sources */,
 				1469D1E72431E2AA00445236 /* AppDelegate.swift in Sources */,
 				149C0C64244AB0B7005B4E19 /* Response.swift in Sources */,
