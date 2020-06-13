@@ -29,6 +29,8 @@
 		14D5747124418C0200DD96AA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D5747024418C0200DD96AA /* Profile.storyboard */; };
 		14D574742441AEE900DD96AA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14D574732441AEE900DD96AA /* SnapKit */; };
 		14D574D52442DD9E00DD96AA /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D574D42442DD9E00DD96AA /* GymViewController.swift */; };
+		14E227DF246F845400FFD7A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E227DE246F845400FFD7A0 /* LoginViewController.swift */; };
+		14E227E1246F845F00FFD7A0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E227E0246F845F00FFD7A0 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		14D5746E244160C800DD96AA /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		14D5747024418C0200DD96AA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		14D574D42442DD9E00DD96AA /* GymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
+		14E227DE246F845400FFD7A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		14E227E0246F845F00FFD7A0 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +101,12 @@
 		1469D1E52431E2AA00445236 /* KINCLE */ = {
 			isa = PBXGroup;
 			children = (
+				14E227DD246F841A00FFD7A0 /* Login */,
+				14D574752441B14400DD96AA /* Root */,
 				140B08F0245D0E850042BDDD /* Problem */,
 				149C0C60244A9C8B005B4E19 /* Network */,
 				1469D2862438380900445236 /* Model */,
 				1469D283243827F500445236 /* Extensions */,
-				14D574752441B14400DD96AA /* Root */,
 				1469D1FC2431E75600445236 /* Home */,
 				1469D1FD2431E75A00445236 /* Gym */,
 				1469D2802437876800445236 /* Crew */,
@@ -202,6 +207,15 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
+		14E227DD246F841A00FFD7A0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				14E227E0246F845F00FFD7A0 /* Login.storyboard */,
+				14E227DE246F845400FFD7A0 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,6 +282,7 @@
 			files = (
 				140B08F4245D0EC90042BDDD /* Problem.storyboard in Resources */,
 				1469D1F32431E2AE00445236 /* LaunchScreen.storyboard in Resources */,
+				14E227E1246F845F00FFD7A0 /* Login.storyboard in Resources */,
 				1469D1F02431E2AE00445236 /* Assets.xcassets in Resources */,
 				14D5747124418C0200DD96AA /* Profile.storyboard in Resources */,
 				1469D2822437879600445236 /* Gym.storyboard in Resources */,
@@ -294,6 +309,7 @@
 				1469D2882438381A00445236 /* Gym.swift in Sources */,
 				1469D27B2437841C00445236 /* CrewViewController.swift in Sources */,
 				1469D27D2437842600445236 /* ProfileViewController.swift in Sources */,
+				14E227DF246F845400FFD7A0 /* LoginViewController.swift in Sources */,
 				1469D1E92431E2AA00445236 /* SceneDelegate.swift in Sources */,
 				14D574D52442DD9E00DD96AA /* GymViewController.swift in Sources */,
 				1469D2852438280100445236 /* UIColor+.swift in Sources */,
