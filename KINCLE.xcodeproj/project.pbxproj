@@ -25,10 +25,12 @@
 		1469D2882438381A00445236 /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D2872438381A00445236 /* Gym.swift */; };
 		149C0C62244A9C9B005B4E19 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0C61244A9C9B005B4E19 /* ApiManager.swift */; };
 		149C0C64244AB0B7005B4E19 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0C63244AB0B7005B4E19 /* Response.swift */; };
+		14A5837D24946CD000B31437 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5837C24946CD000B31437 /* JoinViewController.swift */; };
 		14D5746F244160C800DD96AA /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D5746E244160C800DD96AA /* App.swift */; };
 		14D5747124418C0200DD96AA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D5747024418C0200DD96AA /* Profile.storyboard */; };
 		14D574742441AEE900DD96AA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14D574732441AEE900DD96AA /* SnapKit */; };
 		14D574D52442DD9E00DD96AA /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D574D42442DD9E00DD96AA /* GymViewController.swift */; };
+		14DCCC3224A6E9FA0062C028 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DCCC3124A6E9FA0062C028 /* BaseViewController.swift */; };
 		14E227DF246F845400FFD7A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E227DE246F845400FFD7A0 /* LoginViewController.swift */; };
 		14E227E1246F845F00FFD7A0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E227E0246F845F00FFD7A0 /* Login.storyboard */; };
 /* End PBXBuildFile section */
@@ -54,9 +56,11 @@
 		1469D2872438381A00445236 /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
 		149C0C61244A9C9B005B4E19 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		149C0C63244AB0B7005B4E19 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		14A5837C24946CD000B31437 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		14D5746E244160C800DD96AA /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		14D5747024418C0200DD96AA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		14D574D42442DD9E00DD96AA /* GymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
+		14DCCC3124A6E9FA0062C028 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		14E227DE246F845400FFD7A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		14E227E0246F845F00FFD7A0 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +182,7 @@
 			children = (
 				1469D2842438280100445236 /* UIColor+.swift */,
 				14D5746E244160C800DD96AA /* App.swift */,
+				14DCCC3124A6E9FA0062C028 /* BaseViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			children = (
 				14E227E0246F845F00FFD7A0 /* Login.storyboard */,
 				14E227DE246F845400FFD7A0 /* LoginViewController.swift */,
+				14A5837C24946CD000B31437 /* JoinViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -298,9 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1469D2772437813600445236 /* HomeViewController.swift in Sources */,
+				14A5837D24946CD000B31437 /* JoinViewController.swift in Sources */,
 				1469D1EB2431E2AA00445236 /* ViewController.swift in Sources */,
 				14D5746F244160C800DD96AA /* App.swift in Sources */,
 				149C0C62244A9C9B005B4E19 /* ApiManager.swift in Sources */,
+				14DCCC3224A6E9FA0062C028 /* BaseViewController.swift in Sources */,
 				140B08F2245D0EAE0042BDDD /* ProblemViewController.swift in Sources */,
 				1469D1FB2431E72700445236 /* MainTabViewController.swift in Sources */,
 				1469D1E72431E2AA00445236 /* AppDelegate.swift in Sources */,

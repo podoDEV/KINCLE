@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import AuthenticationServices
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
     @IBOutlet weak var headerTopSpace: NSLayoutConstraint!
     @IBOutlet weak var idTextField: UITextField!
@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
         self.setupAppleLoginButton()
         self.setupButtons()
         self.registerNofitifcations()
+        self.updateNavigationBarAsTransparent()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -87,6 +88,11 @@ class LoginViewController: UIViewController {
     func registerNofitifcations() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @IBAction func signUpButtonDidTap(_ sender: Any) {
+        let viewController = JoinViewController.create()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
