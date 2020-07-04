@@ -108,7 +108,7 @@ class LoginViewController: BaseViewController {
     }
 
     @objc func keyboardWillHide(_ notification: Notification) {
-        self.headerTopSpace.constant = 117
+        self.headerTopSpace.constant = 70
         UIView.animate(withDuration: 0.25, animations: {
             self.view.layoutIfNeeded()
         })

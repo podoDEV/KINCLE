@@ -20,13 +20,13 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     func setupLeftItemButton() {
         if self.isModal {
-            
+            let image = UIImage(named: "close_black")
+            let item = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(self.close))
+            self.navigationItem.leftBarButtonItem = item
         } else {
             let image = UIImage(named: "navigation_back_black")?.withRenderingMode(.alwaysOriginal)
             let item = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(self.backButtonDidTap))
@@ -39,4 +39,8 @@ class BaseViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
+    @objc
+    func close() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

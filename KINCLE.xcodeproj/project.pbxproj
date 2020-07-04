@@ -31,6 +31,8 @@
 		14D574742441AEE900DD96AA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14D574732441AEE900DD96AA /* SnapKit */; };
 		14D574D52442DD9E00DD96AA /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D574D42442DD9E00DD96AA /* GymViewController.swift */; };
 		14DCCC3224A6E9FA0062C028 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DCCC3124A6E9FA0062C028 /* BaseViewController.swift */; };
+		14DCCC3424A6F0A30062C028 /* ProfileSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DCCC3324A6F0A30062C028 /* ProfileSetupViewController.swift */; };
+		14DCCC3624A6F5EE0062C028 /* SearchFavoriteGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DCCC3524A6F5EE0062C028 /* SearchFavoriteGymViewController.swift */; };
 		14E227DF246F845400FFD7A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E227DE246F845400FFD7A0 /* LoginViewController.swift */; };
 		14E227E1246F845F00FFD7A0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E227E0246F845F00FFD7A0 /* Login.storyboard */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		14D5747024418C0200DD96AA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		14D574D42442DD9E00DD96AA /* GymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
 		14DCCC3124A6E9FA0062C028 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		14DCCC3324A6F0A30062C028 /* ProfileSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetupViewController.swift; sourceTree = "<group>"; };
+		14DCCC3524A6F5EE0062C028 /* SearchFavoriteGymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFavoriteGymViewController.swift; sourceTree = "<group>"; };
 		14E227DE246F845400FFD7A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		14E227E0246F845F00FFD7A0 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +222,8 @@
 				14E227E0246F845F00FFD7A0 /* Login.storyboard */,
 				14E227DE246F845400FFD7A0 /* LoginViewController.swift */,
 				14A5837C24946CD000B31437 /* JoinViewController.swift */,
+				14DCCC3324A6F0A30062C028 /* ProfileSetupViewController.swift */,
+				14DCCC3524A6F5EE0062C028 /* SearchFavoriteGymViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -317,7 +323,9 @@
 				1469D2882438381A00445236 /* Gym.swift in Sources */,
 				1469D27B2437841C00445236 /* CrewViewController.swift in Sources */,
 				1469D27D2437842600445236 /* ProfileViewController.swift in Sources */,
+				14DCCC3624A6F5EE0062C028 /* SearchFavoriteGymViewController.swift in Sources */,
 				14E227DF246F845400FFD7A0 /* LoginViewController.swift in Sources */,
+				14DCCC3424A6F0A30062C028 /* ProfileSetupViewController.swift in Sources */,
 				1469D1E92431E2AA00445236 /* SceneDelegate.swift in Sources */,
 				14D574D52442DD9E00DD96AA /* GymViewController.swift in Sources */,
 				1469D2852438280100445236 /* UIColor+.swift in Sources */,

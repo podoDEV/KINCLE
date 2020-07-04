@@ -9,8 +9,8 @@ class FavoriteGymViewModel {
     var cancellable: AnyCancellable?
     
     func requestFavoriteGyms() {
-        self.cancellable = ApiManager.shared.requestFavoriteGyms()?
-            .assign(to: \.favoriteGyms, on: self)
+//        self.cancellable = ApiManager.shared.requestFavoriteGyms()?
+//            .assign(to: \.favoriteGyms, on: self)
     }
 }
 
