@@ -25,6 +25,11 @@ class JoinViewController: BaseViewController {
         self.setupViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.updateNavigationBarAsTransparent()
+    }
+    
     func registerObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -72,23 +77,3 @@ class JoinViewController: BaseViewController {
     }
 }
 
-extension UIViewController {
-    
-    func updateNavigationBarAsTransparent() {
-        self.navigationController?.navigationBar.standardAppearance.configureWithTransparentBackground()
-        self.setNeedsStatusBarAppearanceUpdate()
-        self.navigationController?.navigationBar.standardAppearance.shadowColor = nil
-        self.navigationController?.navigationBar.standardAppearance.backgroundColor = .clear
-        if let attributes = UINavigationBar.appearance().titleTextAttributes {
-            self.navigationController?.navigationBar.standardAppearance.titleTextAttributes = attributes
-        }
-    }
-    
-    func updateNavigationBarAsDefault() {
-        self.navigationController?.navigationBar.standardAppearance.shadowColor = UIColor(hex: "#dddddd")
-        self.navigationController?.navigationBar.standardAppearance.backgroundColor = .white
-        if let attributes = UINavigationBar.appearance().titleTextAttributes {
-            self.navigationController?.navigationBar.standardAppearance.titleTextAttributes = attributes
-        }
-    }
-}

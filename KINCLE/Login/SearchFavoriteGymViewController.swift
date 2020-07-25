@@ -8,8 +8,13 @@
 
 import UIKit
 
-class SearchFavoriteGymViewController: BaseViewController {
+class SearchFavoriteGymViewController: BaseViewController, UISearchBarDelegate {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    
+    //var searchResults = [MKLocalSearchCompletion]()
+    
     static func create() -> SearchFavoriteGymViewController {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "SearchFavoriteGymViewController") as! SearchFavoriteGymViewController
@@ -18,20 +23,38 @@ class SearchFavoriteGymViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupLeftItemButton()
-
-        // Do any additional setup after loading the view.
+        self.setupNavigation()
+        self.setupSearchBar()
+        self.setupTableView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupNavigation() {
+        self.title = "자주가는 암장 등록하기"
+        self.setupLeftItemButton()
     }
-    */
+    
+    func setupSearchBar() {
+        self.searchBar.placeholder = "검색하기"
+        //self.searchBar.delegate = self
 
+    }
+    
+    func setupTableView() {
+//        self.tableView.delegate = self
+//        self.tableView.dataSource = self
+    }
 }
+
+//extension SearchFavoriteGymViewController: UITableViewDelegate, UITableViewDataSource {
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return self.searchResults.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = UITableViewCell()
+//        cell.textLabel?.text = self.searchResults[indexPath.row].title
+//        return cell
+//    }
+//}
+

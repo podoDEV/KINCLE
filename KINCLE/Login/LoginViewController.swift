@@ -21,6 +21,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var forgotInfoButton: UIButton!
     
     @IBOutlet weak var appleLoginContainerView: UIView!
+    
     var keyboardFrame: CGRect = .zero
     
     override func viewDidLoad() {

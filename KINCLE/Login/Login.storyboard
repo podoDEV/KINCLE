@@ -363,7 +363,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQc-28-kms">
-                                            <rect key="frame" x="67" y="30" width="280" height="161"/>
+                                            <rect key="frame" x="67" y="30" width="280" height="173"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMu-FO-EMk">
                                                     <rect key="frame" x="75" y="0.0" width="130" height="29"/>
@@ -371,12 +371,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NX-rv-09i">
-                                                    <rect key="frame" x="81.5" y="47" width="117.5" height="114"/>
+                                                    <rect key="frame" x="77" y="47" width="126" height="126"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="126" id="9mr-yN-Jox"/>
+                                                        <constraint firstAttribute="width" constant="126" id="vkX-xG-fHn"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                                     <state key="normal">
                                                         <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="default" renderingMode="original"/>
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="profileImageButtonDidTap:" destination="Wju-M9-fTA" eventType="touchUpInside" id="Ltw-cQ-aIK"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -389,7 +396,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkH-3m-Yqf">
-                                            <rect key="frame" x="20" y="221" width="374" height="69"/>
+                                            <rect key="frame" x="20" y="233" width="374" height="69"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNY-z5-uGO">
                                                     <rect key="frame" x="0.0" y="0.0" width="42" height="19.5"/>
@@ -424,7 +431,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hM3-Wi-9W5">
-                                            <rect key="frame" x="20" y="320" width="374" height="235.5"/>
+                                            <rect key="frame" x="20" y="332" width="374" height="235.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 레벨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3y-Ma-B08">
                                                     <rect key="frame" x="0.0" y="0.0" width="46" height="19.5"/>
@@ -432,9 +439,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZA-xy-iuX">
-                                                    <rect key="frame" x="20" y="19.5" width="334" height="216"/>
-                                                </pickerView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufc-md-Sho">
                                                     <rect key="frame" x="241" y="0.0" width="133" height="30"/>
                                                     <state key="normal" title="내 레벨을 모르겠다면?"/>
@@ -442,6 +446,9 @@
                                                         <action selector="levelDescriptionButtonDidTap:" destination="Wju-M9-fTA" eventType="touchUpInside" id="Voc-D0-rvm"/>
                                                     </connections>
                                                 </button>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZA-xy-iuX">
+                                                    <rect key="frame" x="20" y="19.5" width="334" height="216"/>
+                                                </pickerView>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
@@ -456,7 +463,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZk-OJ-fwE">
-                                            <rect key="frame" x="20" y="565.5" width="374" height="68.5"/>
+                                            <rect key="frame" x="20" y="577.5" width="374" height="68.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자주가는 암장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jY-sy-jjs">
                                                     <rect key="frame" x="0.0" y="0.0" width="87.5" height="19.5"/>
@@ -538,6 +545,7 @@
                         <outlet property="levelDescriptionButton" destination="Ufc-md-Sho" id="4II-Ds-TvD"/>
                         <outlet property="levelPicker" destination="zZA-xy-iuX" id="95e-Ea-zz7"/>
                         <outlet property="nickNameTextField" destination="2N8-uP-CuZ" id="9xd-XX-Cre"/>
+                        <outlet property="profileImageButton" destination="0NX-rv-09i" id="sFE-Kj-IHA"/>
                         <outlet property="tableView" destination="Nqo-AO-P7c" id="QUi-0p-1nQ"/>
                     </connections>
                 </viewController>
@@ -553,18 +561,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="4ZG-PN-dkE">
-                                <rect key="frame" x="0.0" y="65" width="414" height="56"/>
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="4ZG-PN-dkE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSG-XA-OTB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sNz-At-S0A">
-                                <rect key="frame" x="0.0" y="121" width="414" height="741"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -572,17 +574,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sNz-At-S0A" firstAttribute="leading" secondItem="0Bc-xz-Yrp" secondAttribute="leading" id="45a-9f-eMO"/>
+                            <constraint firstItem="4ZG-PN-dkE" firstAttribute="top" secondItem="0Bc-xz-Yrp" secondAttribute="top" id="C9h-e8-76G"/>
                             <constraint firstItem="0Bc-xz-Yrp" firstAttribute="bottom" secondItem="sNz-At-S0A" secondAttribute="bottom" id="GpB-z3-x7j"/>
-                            <constraint firstItem="fSG-XA-OTB" firstAttribute="leading" secondItem="0Bc-xz-Yrp" secondAttribute="leading" id="LW9-PU-REG"/>
-                            <constraint firstItem="4ZG-PN-dkE" firstAttribute="top" secondItem="fSG-XA-OTB" secondAttribute="bottom" id="ce6-Tu-vkS"/>
                             <constraint firstItem="sNz-At-S0A" firstAttribute="top" secondItem="4ZG-PN-dkE" secondAttribute="bottom" id="fJo-4g-xB6"/>
                             <constraint firstItem="0Bc-xz-Yrp" firstAttribute="trailing" secondItem="sNz-At-S0A" secondAttribute="trailing" id="fmI-lr-u2e"/>
                             <constraint firstAttribute="trailing" secondItem="4ZG-PN-dkE" secondAttribute="trailing" id="lQY-Pe-rwD"/>
-                            <constraint firstItem="fSG-XA-OTB" firstAttribute="top" secondItem="0Bc-xz-Yrp" secondAttribute="top" id="lns-Iu-Sh0"/>
                             <constraint firstItem="4ZG-PN-dkE" firstAttribute="leading" secondItem="0Bc-xz-Yrp" secondAttribute="leading" id="nJT-Jt-4pJ"/>
-                            <constraint firstItem="0Bc-xz-Yrp" firstAttribute="trailing" secondItem="fSG-XA-OTB" secondAttribute="trailing" id="r3L-ld-Khv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="4ZG-PN-dkE" id="g5W-QV-6zI"/>
+                        <outlet property="tableView" destination="sNz-At-S0A" id="MeB-cP-zH3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYs-kx-eki" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
