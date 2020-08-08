@@ -1,7 +1,7 @@
 
 import UIKit
 
-class MainTabViewController: UIViewController {
+class MainTabViewController: BaseViewController {
     
     enum Tab: Int {
         case problem
@@ -11,6 +11,11 @@ class MainTabViewController: UIViewController {
     @IBOutlet weak var myPageTabButton: UIButton!
     @IBOutlet weak var gymTabButton: UIButton!
     @IBOutlet weak var containerView: UIView!
+    
+    override var navigationItem: UINavigationItem {
+        guard self.viewControllers.count > 0 else { return super.navigationItem }
+        return self.viewControllers[self.selectedTab.rawValue].navigationItem
+    }
     
     var selectedTab: Tab = .problem
     
@@ -70,6 +75,9 @@ class MainTabViewController: UIViewController {
         self.containerView.addSubview(viewController.view)
         viewController.view.frame = self.containerView.bounds
         viewController.didMove(toParent: self)
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         switch tab {
         case .problem:

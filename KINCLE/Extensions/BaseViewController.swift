@@ -70,6 +70,7 @@ class FadeTitleButton: UIButton {
     var titleText: String = "안녕하세요" {
         willSet {
             self.setAttributedTitle(NSAttributedString(string: newValue, attributes: self.titleAttribute), for: .normal)
+            self.sizeToFit()
         }
     }
     
