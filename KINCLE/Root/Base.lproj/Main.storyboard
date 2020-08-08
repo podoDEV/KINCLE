@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainTabViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainTabViewController" customModule="KINCLE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJq-gK-MIg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwR-Fj-8TF">
+                                <rect key="frame" x="0.0" y="780" width="414" height="82"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2s-yV-cpz">
+                                        <rect key="frame" x="266" y="32" width="110" height="32"/>
+                                        <state key="normal" title="마이페이지" image="tab_myPage_off">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <state key="selected" image="tab_myPage_on"/>
+                                        <connections>
+                                            <action selector="myPageButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uj9-it-Gcr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0y-dY-Dsa">
+                                        <rect key="frame" x="30" y="32" width="64" height="32"/>
+                                        <state key="normal" title="암장" image="tab_climbing_off">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <state key="selected" image="tab_climbing_on"/>
+                                        <connections>
+                                            <action selector="gymButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Upv-OI-6ES"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="X0y-dY-Dsa" firstAttribute="leading" secondItem="NwR-Fj-8TF" secondAttribute="leading" constant="30" id="Eyi-6d-idx"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="W2s-yV-cpz" secondAttribute="bottom" constant="10" id="We3-VH-Zn2"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="X0y-dY-Dsa" secondAttribute="bottom" constant="10" id="dyv-DX-v4Y"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="W2s-yV-cpz" secondAttribute="trailing" constant="30" id="hm7-U5-QZv"/>
+                                    <constraint firstAttribute="height" constant="82" id="w8y-Oa-hAk"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxT-zQ-DGx">
+                                <rect key="frame" x="175" y="746" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="FL8-7Z-LYw"/>
+                                    <constraint firstAttribute="height" constant="64" id="oO3-6i-LxC"/>
+                                </constraints>
+                                <state key="normal" image="tab_plus"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NwR-Fj-8TF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="39f-8H-kDv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NwR-Fj-8TF" secondAttribute="bottom" id="8cu-ip-KaW"/>
+                            <constraint firstItem="NwR-Fj-8TF" firstAttribute="top" secondItem="jxT-zQ-DGx" secondAttribute="bottom" constant="-30" id="BHa-TV-cld"/>
+                            <constraint firstItem="IJq-gK-MIg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q29-f6-bjI"/>
+                            <constraint firstItem="IJq-gK-MIg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RvH-yu-i74"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NwR-Fj-8TF" secondAttribute="trailing" id="hbV-RB-gBS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IJq-gK-MIg" secondAttribute="trailing" id="s83-AL-fX1"/>
+                            <constraint firstItem="jxT-zQ-DGx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="srf-2a-GGV"/>
+                            <constraint firstItem="NwR-Fj-8TF" firstAttribute="top" secondItem="IJq-gK-MIg" secondAttribute="bottom" id="xEg-gi-W5m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="IJq-gK-MIg" id="DAB-XC-zGQ"/>
+                        <outlet property="gymTabButton" destination="X0y-dY-Dsa" id="xz7-wg-8TR"/>
+                        <outlet property="myPageTabButton" destination="W2s-yV-cpz" id="god-4a-PEE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_climbing_off" width="32" height="32"/>
+        <image name="tab_climbing_on" width="32" height="32"/>
+        <image name="tab_myPage_off" width="32" height="32"/>
+        <image name="tab_myPage_on" width="32" height="32"/>
+        <image name="tab_plus" width="72" height="72"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

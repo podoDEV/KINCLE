@@ -1,10 +1,10 @@
 
 import Foundation
 
-class Response<T: Decodable>: Decodable {
+class RawResponse<T: Decodable>: Decodable {
     
-    var code: Int
-    var data: T
+    var code: Int = 0
+    var data: T?
     
     enum CodingKeys: String, CodingKey {
         
@@ -15,6 +15,9 @@ class Response<T: Decodable>: Decodable {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.code = try container.decode(Int.self, forKey: .code)
-        self.data = try container.decode(T.self, forKey: .data)
+        self.data = try? container.decode(T.self, forKey: .data)
     }
+    
+    init() {}
 }
+

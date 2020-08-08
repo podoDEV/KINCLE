@@ -14,9 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        let loginViewController = storyboard.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
-        let navigationController = UINavigationController(rootViewController: loginViewController)
+        let viewController = MainTabViewController.create()
+        let navigationController = UINavigationController(rootViewController: viewController)
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = navigationController

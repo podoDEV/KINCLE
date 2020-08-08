@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import AuthenticationServices
+import Combine
 
 class LoginViewController: BaseViewController {
 
@@ -23,6 +24,13 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var appleLoginContainerView: UIView!
     
     var keyboardFrame: CGRect = .zero
+    
+    var cancellable: AnyCancellable?
+    var reseponse: RawResponse<LoginResponse> = RawResponse<LoginResponse>() {
+        willSet {
+            print(reseponse.code)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +97,12 @@ class LoginViewController: BaseViewController {
     func registerNofitifcations() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @IBAction func loginButtonDidTap(_ sender: Any) {
+        self.cancellable = ApiManager.shared.login(email: "admin", password: "admin", type: .email)?.sink(receiveValue: { (result) in
+            print(result.code, result.data)
+        })
     }
     
     @IBAction func signUpButtonDidTap(_ sender: Any) {
