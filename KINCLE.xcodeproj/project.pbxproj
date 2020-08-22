@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1414565F24B30FA20033CF68 /* KINCLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1414565E24B30FA20033CF68 /* KINCLEUITests.swift */; };
 		14292A2A24DE48A700FB8988 /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14292A2924DE48A700FB8988 /* ProblemViewController.swift */; };
 		14292A2C24DE48B000FB8988 /* Problem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14292A2B24DE48B000FB8988 /* Problem.storyboard */; };
 		1469D1E72431E2AA00445236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1E62431E2AA00445236 /* AppDelegate.swift */; };
@@ -17,11 +16,6 @@
 		1469D1F02431E2AE00445236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1469D1EF2431E2AE00445236 /* Assets.xcassets */; };
 		1469D1F32431E2AE00445236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1469D1F12431E2AE00445236 /* LaunchScreen.storyboard */; };
 		1469D1FB2431E72700445236 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1FA2431E72700445236 /* MainTabViewController.swift */; };
-		1469D2772437813600445236 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D2762437813600445236 /* HomeViewController.swift */; };
-		1469D2792437815000445236 /* FavoriteGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D2782437815000445236 /* FavoriteGymViewController.swift */; };
-		1469D27B2437841C00445236 /* CrewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D27A2437841C00445236 /* CrewViewController.swift */; };
-		1469D27D2437842600445236 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D27C2437842600445236 /* ProfileViewController.swift */; };
-		1469D2822437879600445236 /* Gym.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1469D2812437879600445236 /* Gym.storyboard */; };
 		1469D2852438280100445236 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D2842438280100445236 /* UIColor+.swift */; };
 		1469D2882438381A00445236 /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D2872438381A00445236 /* Gym.swift */; };
 		149C0C62244A9C9B005B4E19 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0C61244A9C9B005B4E19 /* ApiManager.swift */; };
@@ -29,30 +23,17 @@
 		14A5837D24946CD000B31437 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5837C24946CD000B31437 /* JoinViewController.swift */; };
 		14B5977024BAD37600FD2257 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5976F24BAD37600FD2257 /* Keys.swift */; };
 		14D5746F244160C800DD96AA /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D5746E244160C800DD96AA /* App.swift */; };
-		14D5747124418C0200DD96AA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D5747024418C0200DD96AA /* Profile.storyboard */; };
 		14D574742441AEE900DD96AA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14D574732441AEE900DD96AA /* SnapKit */; };
-		14D574D52442DD9E00DD96AA /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D574D42442DD9E00DD96AA /* GymViewController.swift */; };
 		14DCCC3224A6E9FA0062C028 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DCCC3124A6E9FA0062C028 /* BaseViewController.swift */; };
 		14DCCC3424A6F0A30062C028 /* ProfileSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DCCC3324A6F0A30062C028 /* ProfileSetupViewController.swift */; };
 		14DCCC3624A6F5EE0062C028 /* SearchFavoriteGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DCCC3524A6F5EE0062C028 /* SearchFavoriteGymViewController.swift */; };
 		14E227DF246F845400FFD7A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E227DE246F845400FFD7A0 /* LoginViewController.swift */; };
 		14E227E1246F845F00FFD7A0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E227E0246F845F00FFD7A0 /* Login.storyboard */; };
+		14E7E07624F0BE3B00B99B78 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E07524F0BE3B00B99B78 /* UserManager.swift */; };
+		14E7E07824F0E19900B99B78 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E07724F0E19900B99B78 /* Login.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1414566124B30FA20033CF68 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1469D1DB2431E2AA00445236 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1469D1E22431E2AA00445236;
-			remoteInfo = KINCLE;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		1414565C24B30FA20033CF68 /* KINCLEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KINCLEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1414565E24B30FA20033CF68 /* KINCLEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KINCLEUITests.swift; sourceTree = "<group>"; };
-		1414566024B30FA20033CF68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14292A2924DE48A700FB8988 /* ProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemViewController.swift; sourceTree = "<group>"; };
 		14292A2B24DE48B000FB8988 /* Problem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Problem.storyboard; sourceTree = "<group>"; };
 		1469D1E32431E2AA00445236 /* KINCLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KINCLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,11 +45,6 @@
 		1469D1F22431E2AE00445236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1469D1F42431E2AE00445236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1469D1FA2431E72700445236 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
-		1469D2762437813600445236 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1469D2782437815000445236 /* FavoriteGymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGymViewController.swift; sourceTree = "<group>"; };
-		1469D27A2437841C00445236 /* CrewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewViewController.swift; sourceTree = "<group>"; };
-		1469D27C2437842600445236 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		1469D2812437879600445236 /* Gym.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gym.storyboard; sourceTree = "<group>"; };
 		1469D2842438280100445236 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		1469D2872438381A00445236 /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
 		149C0C61244A9C9B005B4E19 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -76,23 +52,16 @@
 		14A5837C24946CD000B31437 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		14B5976F24BAD37600FD2257 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		14D5746E244160C800DD96AA /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		14D5747024418C0200DD96AA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		14D574D42442DD9E00DD96AA /* GymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
 		14DCCC3124A6E9FA0062C028 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		14DCCC3324A6F0A30062C028 /* ProfileSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetupViewController.swift; sourceTree = "<group>"; };
 		14DCCC3524A6F5EE0062C028 /* SearchFavoriteGymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFavoriteGymViewController.swift; sourceTree = "<group>"; };
 		14E227DE246F845400FFD7A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		14E227E0246F845F00FFD7A0 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		14E7E07524F0BE3B00B99B78 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		14E7E07724F0E19900B99B78 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1414565924B30FA20033CF68 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1469D1E02431E2AA00445236 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,20 +82,10 @@
 			path = Problem;
 			sourceTree = "<group>";
 		};
-		1414565D24B30FA20033CF68 /* KINCLEUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1414565E24B30FA20033CF68 /* KINCLEUITests.swift */,
-				1414566024B30FA20033CF68 /* Info.plist */,
-			);
-			path = KINCLEUITests;
-			sourceTree = "<group>";
-		};
 		1469D1DA2431E2AA00445236 = {
 			isa = PBXGroup;
 			children = (
 				1469D1E52431E2AA00445236 /* KINCLE */,
-				1414565D24B30FA20033CF68 /* KINCLEUITests */,
 				1469D1E42431E2AA00445236 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				1469D1E32431E2AA00445236 /* KINCLE.app */,
-				1414565C24B30FA20033CF68 /* KINCLEUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,48 +101,16 @@
 		1469D1E52431E2AA00445236 /* KINCLE */ = {
 			isa = PBXGroup;
 			children = (
+				1469D2862438380900445236 /* Model */,
 				14E227DD246F841A00FFD7A0 /* Login */,
 				14D574752441B14400DD96AA /* Root */,
-				140B08F0245D0E850042BDDD /* Problem */,
-				149C0C60244A9C8B005B4E19 /* Network */,
-				1469D2862438380900445236 /* Model */,
-				1469D283243827F500445236 /* Extensions */,
-				1469D1FC2431E75600445236 /* Home */,
-				1469D1FD2431E75A00445236 /* Gym */,
-				1469D2802437876800445236 /* Crew */,
-				1469D1FE2431E76000445236 /* Profile */,
+				14E7E07924F0E20D00B99B78 /* Tab */,
+				14E7E07B24F0E29200B99B78 /* Common */,
 				1469D2002431E79D00445236 /* Resources */,
 				1469D1FF2431E76300445236 /* Supporting Files */,
 				1469D1F42431E2AE00445236 /* Info.plist */,
 			);
 			path = KINCLE;
-			sourceTree = "<group>";
-		};
-		1469D1FC2431E75600445236 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				1469D2762437813600445236 /* HomeViewController.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		1469D1FD2431E75A00445236 /* Gym */ = {
-			isa = PBXGroup;
-			children = (
-				1469D2812437879600445236 /* Gym.storyboard */,
-				1469D2782437815000445236 /* FavoriteGymViewController.swift */,
-				14D574D42442DD9E00DD96AA /* GymViewController.swift */,
-			);
-			path = Gym;
-			sourceTree = "<group>";
-		};
-		1469D1FE2431E76000445236 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				1469D27C2437842600445236 /* ProfileViewController.swift */,
-				14D5747024418C0200DD96AA /* Profile.storyboard */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		1469D1FF2431E76300445236 /* Supporting Files */ = {
@@ -207,14 +133,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		1469D2802437876800445236 /* Crew */ = {
-			isa = PBXGroup;
-			children = (
-				1469D27A2437841C00445236 /* CrewViewController.swift */,
-			);
-			path = Crew;
-			sourceTree = "<group>";
-		};
 		1469D283243827F500445236 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +146,7 @@
 		1469D2862438380900445236 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				14E7E07724F0E19900B99B78 /* Login.swift */,
 				1469D2872438381A00445236 /* Gym.swift */,
 			);
 			path = Model;
@@ -263,27 +182,35 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		14E7E07924F0E20D00B99B78 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				140B08F0245D0E850042BDDD /* Problem */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		14E7E07A24F0E27C00B99B78 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				14E7E07524F0BE3B00B99B78 /* UserManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		14E7E07B24F0E29200B99B78 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				149C0C60244A9C8B005B4E19 /* Network */,
+				1469D283243827F500445236 /* Extensions */,
+				14E7E07A24F0E27C00B99B78 /* Managers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1414565B24B30FA20033CF68 /* KINCLEUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1414566524B30FA20033CF68 /* Build configuration list for PBXNativeTarget "KINCLEUITests" */;
-			buildPhases = (
-				1414565824B30FA20033CF68 /* Sources */,
-				1414565924B30FA20033CF68 /* Frameworks */,
-				1414565A24B30FA20033CF68 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1414566224B30FA20033CF68 /* PBXTargetDependency */,
-			);
-			name = KINCLEUITests;
-			productName = KINCLEUITests;
-			productReference = 1414565C24B30FA20033CF68 /* KINCLEUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		1469D1E22431E2AA00445236 /* KINCLE */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1469D1F72431E2AE00445236 /* Build configuration list for PBXNativeTarget "KINCLE" */;
@@ -314,10 +241,6 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Zedd;
 				TargetAttributes = {
-					1414565B24B30FA20033CF68 = {
-						CreatedOnToolsVersion = 11.5;
-						TestTargetID = 1469D1E22431E2AA00445236;
-					};
 					1469D1E22431E2AA00445236 = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -340,19 +263,11 @@
 			projectRoot = "";
 			targets = (
 				1469D1E22431E2AA00445236 /* KINCLE */,
-				1414565B24B30FA20033CF68 /* KINCLEUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1414565A24B30FA20033CF68 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1469D1E12431E2AA00445236 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,8 +275,6 @@
 				1469D1F32431E2AE00445236 /* LaunchScreen.storyboard in Resources */,
 				14E227E1246F845F00FFD7A0 /* Login.storyboard in Resources */,
 				1469D1F02431E2AE00445236 /* Assets.xcassets in Resources */,
-				14D5747124418C0200DD96AA /* Profile.storyboard in Resources */,
-				1469D2822437879600445236 /* Gym.storyboard in Resources */,
 				14292A2C24DE48B000FB8988 /* Problem.storyboard in Resources */,
 				1469D1EE2431E2AA00445236 /* Main.storyboard in Resources */,
 			);
@@ -370,19 +283,10 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1414565824B30FA20033CF68 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1414565F24B30FA20033CF68 /* KINCLEUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1469D1DF2431E2AA00445236 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1469D2772437813600445236 /* HomeViewController.swift in Sources */,
 				14A5837D24946CD000B31437 /* JoinViewController.swift in Sources */,
 				1469D1EB2431E2AA00445236 /* ViewController.swift in Sources */,
 				14D5746F244160C800DD96AA /* App.swift in Sources */,
@@ -393,28 +297,18 @@
 				1469D1FB2431E72700445236 /* MainTabViewController.swift in Sources */,
 				1469D1E72431E2AA00445236 /* AppDelegate.swift in Sources */,
 				149C0C64244AB0B7005B4E19 /* Response.swift in Sources */,
-				1469D2792437815000445236 /* FavoriteGymViewController.swift in Sources */,
 				1469D2882438381A00445236 /* Gym.swift in Sources */,
-				1469D27B2437841C00445236 /* CrewViewController.swift in Sources */,
-				1469D27D2437842600445236 /* ProfileViewController.swift in Sources */,
 				14DCCC3624A6F5EE0062C028 /* SearchFavoriteGymViewController.swift in Sources */,
 				14E227DF246F845400FFD7A0 /* LoginViewController.swift in Sources */,
+				14E7E07824F0E19900B99B78 /* Login.swift in Sources */,
 				14DCCC3424A6F0A30062C028 /* ProfileSetupViewController.swift in Sources */,
 				1469D1E92431E2AA00445236 /* SceneDelegate.swift in Sources */,
-				14D574D52442DD9E00DD96AA /* GymViewController.swift in Sources */,
+				14E7E07624F0BE3B00B99B78 /* UserManager.swift in Sources */,
 				1469D2852438280100445236 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1414566224B30FA20033CF68 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1469D1E22431E2AA00445236 /* KINCLE */;
-			targetProxy = 1414566124B30FA20033CF68 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1469D1EC2431E2AA00445236 /* Main.storyboard */ = {
@@ -436,44 +330,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1414566324B30FA20033CF68 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KINCLEUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Zedd.KINCLEUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KINCLE;
-			};
-			name = Debug;
-		};
-		1414566424B30FA20033CF68 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KINCLEUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Zedd.KINCLEUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KINCLE;
-			};
-			name = Release;
-		};
 		1469D1F52431E2AE00445236 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -627,15 +483,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1414566524B30FA20033CF68 /* Build configuration list for PBXNativeTarget "KINCLEUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1414566324B30FA20033CF68 /* Debug */,
-				1414566424B30FA20033CF68 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1469D1DE2431E2AA00445236 /* Build configuration list for PBXProject "KINCLE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

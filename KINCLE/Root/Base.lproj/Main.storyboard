@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17124"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJq-gK-MIg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="770"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwR-Fj-8TF">
-                                <rect key="frame" x="0.0" y="780" width="414" height="82"/>
+                                <rect key="frame" x="0.0" y="814" width="414" height="82"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2s-yV-cpz">
-                                        <rect key="frame" x="266" y="32" width="110" height="32"/>
+                                        <rect key="frame" x="266" y="8" width="110" height="32"/>
                                         <state key="normal" title="마이페이지" image="tab_myPage_off">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
@@ -35,7 +35,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0y-dY-Dsa">
-                                        <rect key="frame" x="30" y="32" width="64" height="32"/>
+                                        <rect key="frame" x="30" y="8" width="64" height="32"/>
                                         <state key="normal" title="암장" image="tab_climbing_off">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
@@ -48,14 +48,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="X0y-dY-Dsa" firstAttribute="leading" secondItem="NwR-Fj-8TF" secondAttribute="leading" constant="30" id="Eyi-6d-idx"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="W2s-yV-cpz" secondAttribute="bottom" constant="10" id="We3-VH-Zn2"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="X0y-dY-Dsa" secondAttribute="bottom" constant="10" id="dyv-DX-v4Y"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="W2s-yV-cpz" secondAttribute="bottom" id="We3-VH-Zn2"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="X0y-dY-Dsa" secondAttribute="bottom" id="dyv-DX-v4Y"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="W2s-yV-cpz" secondAttribute="trailing" constant="30" id="hm7-U5-QZv"/>
                                     <constraint firstAttribute="height" constant="82" id="w8y-Oa-hAk"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxT-zQ-DGx">
-                                <rect key="frame" x="175" y="746" width="64" height="64"/>
+                                <rect key="frame" x="175" y="780" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="FL8-7Z-LYw"/>
                                     <constraint firstAttribute="height" constant="64" id="oO3-6i-LxC"/>
@@ -67,7 +67,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NwR-Fj-8TF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="39f-8H-kDv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NwR-Fj-8TF" secondAttribute="bottom" id="8cu-ip-KaW"/>
+                            <constraint firstAttribute="bottom" secondItem="NwR-Fj-8TF" secondAttribute="bottom" id="8cu-ip-KaW"/>
                             <constraint firstItem="NwR-Fj-8TF" firstAttribute="top" secondItem="jxT-zQ-DGx" secondAttribute="bottom" constant="-30" id="BHa-TV-cld"/>
                             <constraint firstItem="IJq-gK-MIg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q29-f6-bjI"/>
                             <constraint firstItem="IJq-gK-MIg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RvH-yu-i74"/>
@@ -78,9 +78,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addProblemButton" destination="jxT-zQ-DGx" id="aXO-P8-hGZ"/>
                         <outlet property="containerView" destination="IJq-gK-MIg" id="DAB-XC-zGQ"/>
                         <outlet property="gymTabButton" destination="X0y-dY-Dsa" id="xz7-wg-8TR"/>
                         <outlet property="myPageTabButton" destination="W2s-yV-cpz" id="god-4a-PEE"/>
+                        <outlet property="tabContainerView" destination="NwR-Fj-8TF" id="leL-tb-5ab"/>
+                        <outlet property="tabContainerViewHeight" destination="w8y-Oa-hAk" id="dgg-pq-ei5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

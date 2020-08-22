@@ -58,9 +58,11 @@ class ProblemViewController: BaseViewController, UITableViewDelegate, UITableVie
             cell.configure(currentGymTitle: "홍대 더클라임")
             return cell
         case .bigCategory:
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProblemBigCategoryTableViewCell", for: indexPath) as! ProblemBigCategoryTableViewCell
+            return cell
         case .filter:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProblemFilterTableViewCell", for: indexPath) as!  ProblemFilterTableViewCell
+            cell.configure(totalCount: 0)
             return cell
         case .problem:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProblemTableViewCell", for: indexPath) as! ProblemTableViewCell
@@ -81,6 +83,14 @@ class ProblemViewController: BaseViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 15
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.updateTitle(scrollView)
     }
@@ -92,6 +102,7 @@ class ProblemTitleTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
     }
     
     override func prepareForReuse() {
@@ -112,6 +123,18 @@ class ProblemTitleTableViewCell: UITableViewCell {
     }
 }
 
+class ProblemBigCategoryTableViewCell: UITableViewCell {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.selectionStyle = .none
+
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+}
+
 class ProblemFilterTableViewCell: UITableViewCell {
     
     @IBOutlet weak var filterTitle: UILabel!
@@ -121,10 +144,46 @@ class ProblemFilterTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
+
+        let selectedAttribute: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 13, weight: .medium),
+            .foregroundColor: UIColor.label
+        ]
+        let normalAttribute: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 13, weight: .medium),
+            .foregroundColor: UIColor.secondaryLabel
+        ]
+        self.popularButton.setAttributedTitle(NSAttributedString(string: "• 인기순", attributes: normalAttribute), for: .normal)
+        
+        self.popularButton.setAttributedTitle(NSAttributedString(string: "• 인기순", attributes: selectedAttribute), for: .selected)
+        
+        self.recentButton.setAttributedTitle(NSAttributedString(string: "• 최신순", attributes: normalAttribute), for: .normal)
+        
+        self.recentButton.setAttributedTitle(NSAttributedString(string: "• 최신순", attributes: selectedAttribute), for: .selected)
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
+    }
+    
+    func configure(totalCount: Int) {
+        let attribute: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 13, weight: .light),
+            .foregroundColor: UIColor.label
+        ]
+        let title = "총 \(totalCount)개의 문제"
+        let mutableAttributedString = NSMutableAttributedString(string: title, attributes: attribute)
+        mutableAttributedString.addAttributes([
+            .font: UIFont.systemFont(ofSize: 13, weight: .bold)
+        ], range: (title as NSString).range(of: "\(totalCount)"))
+        self.filterTitle.attributedText = mutableAttributedString
+    }
+    
+    @IBAction func popularButtonDidTap(_ sender: Any) {
+    }
+    
+    @IBAction func recentButtonDidTap(_ sender: Any) {
     }
     
 }
@@ -133,6 +192,8 @@ class ProblemTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
+
     }
     
     override func prepareForReuse() {

@@ -12,7 +12,7 @@ import AuthenticationServices
 import Combine
 
 class LoginViewController: BaseViewController {
-
+    
     @IBOutlet weak var headerTopSpace: NSLayoutConstraint!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -26,10 +26,12 @@ class LoginViewController: BaseViewController {
     var keyboardFrame: CGRect = .zero
     
     var cancellable: AnyCancellable?
-    var reseponse: RawResponse<LoginResponse> = RawResponse<LoginResponse>() {
-        willSet {
-            print(reseponse.code)
-        }
+    var reseponse: RawResponse<LoginResponse> = RawResponse<LoginResponse>() 
+    
+    static func create() -> LoginViewController {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
+        return viewController
     }
     
     override func viewDidLoad() {
@@ -55,6 +57,11 @@ class LoginViewController: BaseViewController {
         self.idTextField.placeholder = "아이디를 입력하세요."
         self.passwordTextField.placeholder = "비밀번호를 입력하세요."
         self.passwordTextField.isSecureTextEntry = true
+        
+        #if DEBUG
+        self.idTextField.text = "tjsehgud@naver.com"
+        self.passwordTextField.text = "admin"
+        #endif
     }
     
     func setupLoginButton() {
@@ -100,9 +107,10 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func loginButtonDidTap(_ sender: Any) {
-        self.cancellable = ApiManager.shared.login(email: "admin", password: "admin", type: .email)?.sink(receiveValue: { (result) in
-            print(result.code, result.data)
-        })
+        self.cancellable = ApiManager.shared.login(email: "tjsehgud@naver.com", password: "admin", type: .email)?
+            .sink(receiveValue: { (result) in
+                print(result.code, result.data?.message)
+            })
     }
     
     @IBAction func signUpButtonDidTap(_ sender: Any) {
@@ -121,7 +129,7 @@ class LoginViewController: BaseViewController {
         })
         
     }
-
+    
     @objc func keyboardWillHide(_ notification: Notification) {
         self.headerTopSpace.constant = 70
         UIView.animate(withDuration: 0.25, animations: {
