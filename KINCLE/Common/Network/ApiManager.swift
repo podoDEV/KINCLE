@@ -42,7 +42,19 @@ class ApiManager {
     
     typealias Response<T: Decodable> = AnyPublisher<RawResponse<T>, Never>
     
-    func post<T: Decodable>(url: URL, parameters: [String: Any]) -> Response<T>? {
+    func get<T: Decodable>(url: URL, parameters: [String: Any]?) -> Response<T> {
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        return URLSession.shared.dataTaskPublisher(for: request)
+            .map(\.data)
+            .decode(type: RawResponse<T>.self, decoder: self.decoder)
+            .replaceError(with: RawResponse<T>())
+            .eraseToAnyPublisher()
+    }
+    
+    func post<T: Decodable>(url: URL, parameters: [String: Any]?) -> Response<T>? {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -87,5 +99,27 @@ extension ApiManager {
             "oauthType": type.stringForServer
         ]
         return self.post(url: url, parameters: parameters)
+    }
+}
+
+// 즐겨찾는 암장
+extension ApiManager {
+    
+    func searchGym(query: String) -> AnyPublisher<GymDocument, Never> {
+        let url = URL(string: "https://dapi.kakao.com/v2/local/search/keyword.json")!
+        var component = URLComponents(string: url.absoluteString)!
+        component.queryItems = [URLQueryItem(name: "query", value: query)]
+        var request = URLRequest(url: component.url ?? url)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.addValue("KakaoAK \(Key.kakaoApiKey)", forHTTPHeaderField: "Authorization")
+        return URLSession.shared.dataTaskPublisher(for: request)
+            .print()
+            .map(\.data)
+            .decode(type: GymDocument.self, decoder: self.decoder)
+            .print()
+            .replaceError(with: GymDocument())
+            .eraseToAnyPublisher()
     }
 }

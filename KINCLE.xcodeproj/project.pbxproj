@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1401E448250C6F3D001FAF92 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1401E447250C6F3D001FAF92 /* Colors.xcassets */; };
+		1401E44A250C722F001FAF92 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401E449250C722F001FAF92 /* ProfileInfo.swift */; };
 		14292A2A24DE48A700FB8988 /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14292A2924DE48A700FB8988 /* ProblemViewController.swift */; };
 		14292A2C24DE48B000FB8988 /* Gym.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14292A2B24DE48B000FB8988 /* Gym.storyboard */; };
 		1469D1E72431E2AA00445236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1E62431E2AA00445236 /* AppDelegate.swift */; };
 		1469D1E92431E2AA00445236 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1E82431E2AA00445236 /* SceneDelegate.swift */; };
-		1469D1EB2431E2AA00445236 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1EA2431E2AA00445236 /* ViewController.swift */; };
 		1469D1EE2431E2AA00445236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1469D1EC2431E2AA00445236 /* Main.storyboard */; };
 		1469D1F02431E2AE00445236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1469D1EF2431E2AE00445236 /* Assets.xcassets */; };
 		1469D1F32431E2AE00445236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1469D1F12431E2AE00445236 /* LaunchScreen.storyboard */; };
@@ -34,17 +35,17 @@
 		14E227E1246F845F00FFD7A0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E227E0246F845F00FFD7A0 /* Login.storyboard */; };
 		14E7E07624F0BE3B00B99B78 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E07524F0BE3B00B99B78 /* UserManager.swift */; };
 		14E7E07824F0E19900B99B78 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E07724F0E19900B99B78 /* Login.swift */; };
-		14E7E07D24F215BD00B99B78 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E07C24F215BD00B99B78 /* Problem.swift */; };
 		14E7E08124F21B7000B99B78 /* GymTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E08024F21B7000B99B78 /* GymTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1401E447250C6F3D001FAF92 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		1401E449250C722F001FAF92 /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfo.swift; sourceTree = "<group>"; };
 		14292A2924DE48A700FB8988 /* ProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemViewController.swift; sourceTree = "<group>"; };
 		14292A2B24DE48B000FB8988 /* Gym.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gym.storyboard; sourceTree = "<group>"; };
 		1469D1E32431E2AA00445236 /* KINCLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KINCLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1469D1E62431E2AA00445236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1469D1E82431E2AA00445236 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1469D1EA2431E2AA00445236 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1469D1ED2431E2AA00445236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1469D1EF2431E2AE00445236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1469D1F22431E2AE00445236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		14E227E0246F845F00FFD7A0 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		14E7E07524F0BE3B00B99B78 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		14E7E07724F0E19900B99B78 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		14E7E07C24F215BD00B99B78 /* Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
 		14E7E08024F21B7000B99B78 /* GymTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +127,6 @@
 		1469D1FF2431E76300445236 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1469D1EA2431E2AA00445236 /* ViewController.swift */,
 				1469D1E62431E2AA00445236 /* AppDelegate.swift */,
 				1469D1E82431E2AA00445236 /* SceneDelegate.swift */,
 				14B5976F24BAD37600FD2257 /* Keys.swift */,
@@ -140,6 +139,7 @@
 			children = (
 				1469D1F12431E2AE00445236 /* LaunchScreen.storyboard */,
 				1469D1EF2431E2AE00445236 /* Assets.xcassets */,
+				1401E447250C6F3D001FAF92 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 			children = (
 				14E7E07724F0E19900B99B78 /* Login.swift */,
 				1469D2872438381A00445236 /* Gym.swift */,
-				14E7E07C24F215BD00B99B78 /* Problem.swift */,
+				1401E449250C722F001FAF92 /* ProfileInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +302,7 @@
 				1469D1F02431E2AE00445236 /* Assets.xcassets in Resources */,
 				14292A2C24DE48B000FB8988 /* Gym.storyboard in Resources */,
 				1469D1EE2431E2AA00445236 /* Main.storyboard in Resources */,
+				1401E448250C6F3D001FAF92 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A5837D24946CD000B31437 /* JoinViewController.swift in Sources */,
-				1469D1EB2431E2AA00445236 /* ViewController.swift in Sources */,
+				1401E44A250C722F001FAF92 /* ProfileInfo.swift in Sources */,
 				14D5746F244160C800DD96AA /* App.swift in Sources */,
 				14B5977024BAD37600FD2257 /* Keys.swift in Sources */,
 				14E7E08124F21B7000B99B78 /* GymTabViewController.swift in Sources */,
@@ -327,7 +328,6 @@
 				14DCCC3624A6F5EE0062C028 /* SearchFavoriteGymViewController.swift in Sources */,
 				14E227DF246F845400FFD7A0 /* LoginViewController.swift in Sources */,
 				14E7E07824F0E19900B99B78 /* Login.swift in Sources */,
-				14E7E07D24F215BD00B99B78 /* Problem.swift in Sources */,
 				14D55DDE250339F3007EFE3E /* MyPageViewController.swift in Sources */,
 				14DCCC3424A6F0A30062C028 /* ProfileSetupViewController.swift in Sources */,
 				1469D1E92431E2AA00445236 /* SceneDelegate.swift in Sources */,

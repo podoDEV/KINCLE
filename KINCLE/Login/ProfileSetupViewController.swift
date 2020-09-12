@@ -22,9 +22,12 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
     
     @IBOutlet weak var completeButton: UIButton!
     
-    static func create() -> ProfileSetupViewController {
+    var profileInfo: ProfileInfo!
+    
+    static func create(email: String, password: String) -> ProfileSetupViewController {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let viewControlelr = storyboard.instantiateViewController(identifier: "ProfileSetupViewController") as! ProfileSetupViewController
+        viewControlelr.profileInfo = ProfileInfo(email: email, password: password)
         return viewControlelr
     }
     
@@ -96,7 +99,6 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
     
     @IBAction func levelDescriptionButtonDidTap(_ sender: Any) {
         let view = UIImageView()
-        
     }
     
     @IBAction func completeButtonDidTap(_ sender: Any) {
@@ -118,6 +120,7 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
         self.updateTitle(scrollView)
     }
 }
+
 extension ProfileSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -140,7 +143,7 @@ extension ProfileSetupViewController: UIImagePickerControllerDelegate, UINavigat
         if let image = info[.originalImage] as? UIImage {
             self.profileImageButton.setImage(image, for: .normal)
             self.profileImageButton.layer.borderWidth = 2
-            self.profileImageButton.layer.borderColor = UIColor(hex: "#10dddd").cgColor
+            self.profileImageButton.layer.borderColor = App.Color.accent.cgColor
         }
     }
 }

@@ -64,15 +64,21 @@ class JoinViewController: BaseViewController, UITextFieldDelegate {
     func setupTextField() {
         self.emailTextField.delegate = self
         self.pwTextField.delegate = self
+        #if DEBUG
+        self.emailTextField.text = "test@gmail.com"
+        self.pwTextField.text = "podo123!@#"
+        self.updateJoinButton(isEnable: true)
+        #endif
     }
     
     @IBAction func joinButtonDidTap(_ sender: Any) {
-        let viewController = ProfileSetupViewController.create()
+        guard let email = self.emailTextField.text, let password = self.pwTextField.text else { return }
+        let viewController = ProfileSetupViewController.create(email: email, password: password)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     func updateJoinButton(isEnable: Bool) {
-        self.joinButton.backgroundColor = isEnable ? UIColor(hex: "#00dad2") : UIColor(hex: "#dbdbdb")
+        self.joinButton.backgroundColor = isEnable ? App.Color.accent : UIColor(hex: "#dbdbdb")
         self.joinButton.isUserInteractionEnabled = isEnable
     }
     

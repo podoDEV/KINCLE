@@ -305,9 +305,9 @@ class ProblemTableViewCell: UITableViewCell {
     
     func setupViews() {
         self.problemImageView.layer.cornerRadius = 16
-        self.levelLabel.backgroundColor = UIColor(hex: "#00dad2").withAlphaComponent(0.15)
+        self.levelLabel.backgroundColor = App.Color.accent.withAlphaComponent(0.15)
         self.levelLabel.font = UIFont.systemFont(ofSize: 10, weight: .black)
-        self.levelLabel.textColor = UIColor(hex: "#00dad2")
+        self.levelLabel.textColor = App.Color.accent
         
         self.problemTitleLabel.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         self.problemTitleLabel.textColor = UIColor.label

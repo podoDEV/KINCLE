@@ -1,10 +1,12 @@
 
 import UIKit
+import Combine
 
 class SearchFavoriteGymViewController: BaseViewController, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    var cancellable = Set<AnyCancellable>()
     
     //var searchResults = [MKLocalSearchCompletion]()
     
@@ -38,7 +40,10 @@ class SearchFavoriteGymViewController: BaseViewController, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("d")
+        guard let query = searchBar.text else { return }
+        ApiManager.shared.searchGym(query: query).handleEvents().sink { (gyms) in
+            print(gyms.gyms.count)
+        }.store(in: &self.cancellable)
     }
 }
 
