@@ -94,6 +94,7 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
     @IBAction func searchFavoriteGymButtonDidTap(_ sender: Any) {
         let viewController = SearchFavoriteGymViewController.create()
         let navigation = UINavigationController(rootViewController: viewController)
+        navigation.modalPresentationStyle = .fullScreen
         self.present(navigation, animated: true, completion: nil)
     }
     

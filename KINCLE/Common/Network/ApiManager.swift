@@ -115,7 +115,6 @@ extension ApiManager {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("KakaoAK \(Key.kakaoApiKey)", forHTTPHeaderField: "Authorization")
         return URLSession.shared.dataTaskPublisher(for: request)
-            .print()
             .map(\.data)
             .decode(type: GymDocument.self, decoder: self.decoder)
             .print()
