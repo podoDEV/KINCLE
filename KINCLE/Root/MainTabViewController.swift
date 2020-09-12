@@ -63,10 +63,10 @@ class MainTabViewController: BaseViewController {
         self.gymTabButton.alignImageAndTitleVertically(padding: 0)
         self.myPageTabButton.alignImageAndTitleVertically(padding: 0)
         
-        let problemViewController = ProblemViewController.create()
-        let myPageViewController = UIViewController()
+        let gymController = GymTabViewController.create()
+        let myPageViewController = MyPageViewController.create()
         
-        self.viewControllers = [problemViewController, myPageViewController]
+        self.viewControllers = [gymController, myPageViewController]
         self.updateMainView(to: .problem)
     }
     
@@ -76,6 +76,13 @@ class MainTabViewController: BaseViewController {
     
     @IBAction func myPageButtonDidTap(_ sender: UIButton) {
         self.updateMainView(to: .myPage)
+    }
+    
+    @IBAction func addButtonDidTap(_ sender: Any) {
+        let viewController = ProblemViewController.create()
+        let navigation = UINavigationController(rootViewController: viewController)
+        navigation.modalPresentationStyle = .fullScreen
+        self.present(navigation, animated: true, completion: nil)
     }
     
     func updateMainView(to tab: Tab) {

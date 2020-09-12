@@ -1,10 +1,3 @@
-//
-//  SearchFavoriteGymViewController.swift
-//  KINCLE
-//
-//  Created by Zedd on 2020/06/27.
-//  Copyright © 2020 Zedd. All rights reserved.
-//
 
 import UIKit
 
@@ -35,13 +28,17 @@ class SearchFavoriteGymViewController: BaseViewController, UISearchBarDelegate {
     
     func setupSearchBar() {
         self.searchBar.placeholder = "검색하기"
-        //self.searchBar.delegate = self
+        self.searchBar.delegate = self
 
     }
     
     func setupTableView() {
 //        self.tableView.delegate = self
 //        self.tableView.dataSource = self
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("d")
     }
 }
 

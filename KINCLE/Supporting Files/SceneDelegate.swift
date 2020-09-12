@@ -14,7 +14,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let viewController = LoginViewController.create()
+        let viewController: UIViewController = {
+            if let _ = UserManager.shared.accessToken {
+                return MainTabViewController.create()
+            } else {
+                return LoginViewController.create()
+            }
+        }()
         let navigationController = UINavigationController(rootViewController: viewController)
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)

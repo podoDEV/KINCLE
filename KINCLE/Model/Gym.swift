@@ -1,11 +1,3 @@
-//
-//  FavoriteGym.swift
-//  KINCLE
-//
-//  Created by Zedd on 2020/04/04.
-//  Copyright © 2020 Zedd. All rights reserved.
-//
-
 import Foundation
 
 class Gym: Decodable {
@@ -23,12 +15,12 @@ class Gym: Decodable {
         case mainImageURL = "imageUrl"
     }
     
-    init() {}
-    
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.name = try container.decode(String.self, forKey: .name)
         self.address = try container.decode(String.self, forKey: .address)
         self.mainImageURL = try container.decode(String.self, forKey: .mainImageURL)
     }
+    
+    init() {}
 }

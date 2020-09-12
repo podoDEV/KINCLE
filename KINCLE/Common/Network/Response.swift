@@ -20,4 +20,3 @@ class RawResponse<T: Decodable>: Decodable {
     
     init() {}
 }
-

@@ -61,6 +61,9 @@
                                     <constraint firstAttribute="height" constant="64" id="oO3-6i-LxC"/>
                                 </constraints>
                                 <state key="normal" image="tab_plus"/>
+                                <connections>
+                                    <action selector="addButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z4m-Ry-qQR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

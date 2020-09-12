@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17124"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -195,16 +195,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGb-i3-ckM">
-                                <rect key="frame" x="133.5" y="114" width="147" height="75"/>
+                                <rect key="frame" x="134" y="114" width="146.5" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐거운 클라이밍 첫걸음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-4s-3Fy">
-                                        <rect key="frame" x="0.0" y="0.0" width="147" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="146.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pon-cY-iTS">
-                                        <rect key="frame" x="0.0" y="36.5" width="147" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="36.5" width="146.5" height="38.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -226,6 +226,9 @@
                                         <rect key="frame" x="37" y="0.0" width="331" height="18.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="i9j-vN-3Uj" eventType="editingChanged" id="Xor-Yc-OuW"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="503-44-hpk">
                                         <rect key="frame" x="0.0" y="28.5" width="368" height="1"/>
@@ -273,6 +276,9 @@
                                         <rect key="frame" x="37" y="0.0" width="331" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="i9j-vN-3Uj" eventType="editingChanged" id="yCz-7H-D5j"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7B3-IM-QY7">
                                         <rect key="frame" x="0.0" y="32" width="368" height="1"/>
@@ -295,7 +301,7 @@
                                     <constraint firstAttribute="trailing" secondItem="hSh-ev-QLa" secondAttribute="trailing" id="xD2-f0-R9h"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMb-gg-d6h">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMb-gg-d6h">
                                 <rect key="frame" x="23" y="423.5" width="368" height="48"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -340,10 +346,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="5DP-U8-1c2" id="AIj-2j-Cn0"/>
                         <outlet property="emailWarningLabel" destination="WII-EL-OuC" id="3Ed-NA-nYV"/>
                         <outlet property="headerTopSpace" destination="J49-z2-soz" id="ijA-Bv-mAR"/>
                         <outlet property="joinButton" destination="gMb-gg-d6h" id="mhz-WZ-JEF"/>
                         <outlet property="passwordWarningLabel" destination="RJp-T2-KFv" id="Ju8-rD-end"/>
+                        <outlet property="pwTextField" destination="hSh-ev-QLa" id="we8-mM-VNz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZi-qr-8Yd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

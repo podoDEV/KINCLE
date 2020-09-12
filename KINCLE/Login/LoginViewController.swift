@@ -109,8 +109,20 @@ class LoginViewController: BaseViewController {
     @IBAction func loginButtonDidTap(_ sender: Any) {
         self.cancellable = ApiManager.shared.login(email: "tjsehgud@naver.com", password: "admin", type: .email)?
             .sink(receiveValue: { (result) in
-                print(result.code, result.data?.message)
+                if result.code == 200 {
+                    UserManager.shared.accessToken = result.data?.token
+                    self.switchToMainTab()
+                }
             })
+    }
+    
+    func switchToMainTab() {
+        DispatchQueue.main.async {
+            let viewController = MainTabViewController.create()
+            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
+            let navigation = UINavigationController(rootViewController: viewController)
+            sceneDelegate.window?.rootViewController = navigation
+        }
     }
     
     @IBAction func signUpButtonDidTap(_ sender: Any) {

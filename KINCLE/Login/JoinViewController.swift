@@ -1,15 +1,18 @@
 
 import UIKit
+import Combine
 
-class JoinViewController: BaseViewController {
+class JoinViewController: BaseViewController, UITextFieldDelegate {
 
     @IBOutlet weak var headerTopSpace: NSLayoutConstraint!
     
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var joinButton: UIButton!
     
     @IBOutlet weak var passwordWarningLabel: UILabel!
     @IBOutlet weak var emailWarningLabel: UILabel!
     
+    @IBOutlet weak var pwTextField: UITextField!
     var keyboardFrame: CGRect = .zero
     
     static func create() -> JoinViewController {
@@ -23,6 +26,7 @@ class JoinViewController: BaseViewController {
         self.registerObserver()
         self.setupLeftItemButton()
         self.setupViews()
+        self.setupTextField()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,8 +44,13 @@ class JoinViewController: BaseViewController {
     }
     
     func setupViews() {
-        self.emailWarningLabel.text = nil
-        self.passwordWarningLabel.text = nil
+        [self.emailWarningLabel, self.passwordWarningLabel].forEach {
+            $0?.text = nil
+            $0?.textColor = UIColor(hex: "#ff0000")
+            $0?.font = UIFont.systemFont(ofSize: 11, weight: .light)
+        }
+        
+        self.joinButton.isUserInteractionEnabled = false
         self.joinButton.backgroundColor = UIColor(hex: "#dbdbdb")
         self.joinButton.layer.cornerRadius = 11
         let title = NSAttributedString(string: "회원가입", attributes: [
@@ -52,9 +61,80 @@ class JoinViewController: BaseViewController {
         self.joinButton.setAttributedTitle(title, for: .normal)
     }
     
+    func setupTextField() {
+        self.emailTextField.delegate = self
+        self.pwTextField.delegate = self
+    }
+    
     @IBAction func joinButtonDidTap(_ sender: Any) {
         let viewController = ProfileSetupViewController.create()
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func updateJoinButton(isEnable: Bool) {
+        self.joinButton.backgroundColor = isEnable ? UIColor(hex: "#00dad2") : UIColor(hex: "#dbdbdb")
+        self.joinButton.isUserInteractionEnabled = isEnable
+    }
+    
+    @IBAction func textFieldEditingChanged(_ sender: UITextField) {
+        guard let text = sender.text else { return }
+        switch sender {
+        case self.emailTextField:
+            self.updateEmailWarningIfNeeded(text: nil)
+        case self.pwTextField, _:
+            self.updatePwWarningIfNeeded(text: nil)
+            let warningText = isValidPw(of: text)
+            if warningText == nil, self.emailWarningLabel.text == nil {
+                self.updateJoinButton(isEnable: true)
+            } else {
+                self.updateJoinButton(isEnable: false)
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let text = textField.text else { return false }
+        switch textField {
+        case self.emailTextField:
+            let warningText = self.isValidEmail(of: text)
+            self.updateEmailWarningIfNeeded(text: warningText)
+            return warningText == nil
+        case self.pwTextField, _:
+            let warningText = self.isValidPw(of: text)
+            self.updatePwWarningIfNeeded(text: warningText)
+            return warningText == nil
+        }
+    }
+  
+    func updateEmailWarningIfNeeded(text: String?) {
+        self.emailWarningLabel.text = text
+    }
+    
+    func updatePwWarningIfNeeded(text: String?) {
+        self.passwordWarningLabel.text = text
+    }
+     
+    func isValidEmail(of email: String) -> String? {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let isValid = emailPred.evaluate(with: email)
+        if isValid {
+            return nil
+        } else {
+            return "올바른 이메일 형식으로 입력해 주세요"
+        }
+    }
+    
+    func isValidPw(of text: String) -> String? {
+        let pwRegEx = "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[0-9]).{8,}$"
+        let pwPred = NSPredicate(format:"SELF MATCHES %@", pwRegEx)
+        let isValid = pwPred.evaluate(with: text)
+        if isValid {
+            return nil
+        } else {
+            return "숫자와 영문 조합 8자리 이상 사용해주세요"
+        }
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
@@ -66,7 +146,6 @@ class JoinViewController: BaseViewController {
         UIView.animate(withDuration: rate ?? 0.25, animations: {
             self.view.layoutIfNeeded()
         })
-        
     }
 
     @objc func keyboardWillHide(_ notification: Notification) {

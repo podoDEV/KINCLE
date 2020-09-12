@@ -23,6 +23,7 @@ class LoginResponse: Decodable {
     var message: String?
     
     enum CodingKeys: String, CodingKey {
+        
         case token
         case message
     }
