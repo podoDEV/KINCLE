@@ -43,7 +43,7 @@ class ProblemViewController: BaseViewController, UIImagePickerControllerDelegate
         guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
         let uploadable = UploadableImageData(data: imageData, mimeType: "jpg")
         let url = "\(Key.apiHost)/upload"
-        ApiManager.shared.upload(url: url, uploadable: uploadable)
+        //ApiManager.shared.upload(url: url, uploadable: uploadable)
     }
     
     func imageWithView(view: UIView) -> UIImage? {

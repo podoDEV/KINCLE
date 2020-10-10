@@ -63,11 +63,19 @@ class ApiManager {
         return URLSession.shared.dataTaskPublisher(for: request)
             .map(\.data)
             .decode(type: RawResponse<T>.self, decoder: self.decoder)
+            .print()
             .replaceError(with: RawResponse<T>())
             .eraseToAnyPublisher()
     }
     
-    func upload(url: String, uploadable: Uploadable, headers: HTTPHeaders? = nil) {
+    func uploadProfileImage(with image: UIImage, completion: @escaping (ImageResponse) -> Void)  {
+        guard let data = image.jpegData(compressionQuality: 1) else { return }
+        let uploadable = UploadableImageData(data: data, mimeType: "jpg")
+        let url = "\(Key.apiHost)/upload"
+        self.upload(url: url, uploadable: uploadable, completion: completion)
+    }
+    
+    func upload<T: Decodable>(url: String, uploadable: Uploadable, headers: HTTPHeaders? = nil, completion: @escaping (T) -> Void) {
         let method: HTTPMethod = HTTPMethod.post
         print(url)
         AF.upload(multipartFormData: { (multipartFormData) in
@@ -80,7 +88,14 @@ class ApiManager {
         }, to: url, usingThreshold: UInt64(), method: method, headers: nil, interceptor: .none).responseData { (response) in
             switch response.result {
             case let .success(data):
-                print(String(data: data, encoding: .utf8))
+                do {
+                    print(String(data: data, encoding: .utf8))
+                    let decoder = JSONDecoder()
+                    let object = try decoder.decode(RawResponse<T>.self, from: data)
+                    completion(object.data!)
+                } catch {
+                    
+                }
             case let .failure(error):
                 print(error)
             }

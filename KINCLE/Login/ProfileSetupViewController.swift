@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Combine
 
 class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable, UITableViewDelegate {
     
@@ -45,6 +46,7 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
     }
     
     func setupProfileImageButton() {
+        self.profileImageButton.imageView?.contentMode = .scaleAspectFill
         self.profileImageButton.clipsToBounds = true
         self.profileImageButton.layer.cornerRadius = self.profileImageButton.frame.height / 2
     }
@@ -108,10 +110,17 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
         let viewController = LevelDescriptionViewController.create()
         viewController.modalPresentationStyle = .overCurrentContext
         self.present(viewController, animated: false, completion: nil)
-        
     }
     
     @IBAction func completeButtonDidTap(_ sender: Any) {
+        // 1. 이미지 업로드
+        if let profileImage = self.profileImageButton.currentImage {
+            ApiManager.shared.uploadProfileImage(with: profileImage) { (response) in
+                print(response.imageUrl, "zedd")
+            }
+        }
+        // 2. 즐겨찾는 암장 업로드
+        // 3. 회원가입.
     }
     
     @objc

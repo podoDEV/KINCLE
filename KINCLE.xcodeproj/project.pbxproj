@@ -37,6 +37,7 @@
 		14E7E07824F0E19900B99B78 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E07724F0E19900B99B78 /* Login.swift */; };
 		14E7E08124F21B7000B99B78 /* GymTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E08024F21B7000B99B78 /* GymTabViewController.swift */; };
 		14F963FD25315E300033ACA8 /* LevelDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F963FC25315E300033ACA8 /* LevelDescriptionViewController.swift */; };
+		14F9640025316A4E0033ACA8 /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F963FF25316A4E0033ACA8 /* ImageResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		14E7E07724F0E19900B99B78 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		14E7E08024F21B7000B99B78 /* GymTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymTabViewController.swift; sourceTree = "<group>"; };
 		14F963FC25315E300033ACA8 /* LevelDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDescriptionViewController.swift; sourceTree = "<group>"; };
+		14F963FF25316A4E0033ACA8 /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				14E7E07724F0E19900B99B78 /* Login.swift */,
 				1469D2872438381A00445236 /* Gym.swift */,
 				1401E449250C722F001FAF92 /* ProfileInfo.swift */,
+				14F963FF25316A4E0033ACA8 /* ImageResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				1401E44A250C722F001FAF92 /* ProfileInfo.swift in Sources */,
 				14D5746F244160C800DD96AA /* App.swift in Sources */,
 				14B5977024BAD37600FD2257 /* Keys.swift in Sources */,
+				14F9640025316A4E0033ACA8 /* ImageResponse.swift in Sources */,
 				14E7E08124F21B7000B99B78 /* GymTabViewController.swift in Sources */,
 				149C0C62244A9C9B005B4E19 /* ApiManager.swift in Sources */,
 				14DCCC3224A6E9FA0062C028 /* BaseViewController.swift in Sources */,
