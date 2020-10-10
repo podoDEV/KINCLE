@@ -140,7 +140,7 @@ class BaseViewController: UIViewController {
     
     func setupLeftItemButton() {
         if self.isModal {
-            let image = UIImage(named: "close_black")?.withRenderingMode(.alwaysOriginal)
+            let image = UIImage(systemName: "xmark")?.withRenderingMode(.alwaysOriginal)
             let item = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(self.close))
             self.navigationItem.leftBarButtonItem = item
         } else {

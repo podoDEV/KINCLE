@@ -36,6 +36,7 @@
 		14E7E07624F0BE3B00B99B78 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E07524F0BE3B00B99B78 /* UserManager.swift */; };
 		14E7E07824F0E19900B99B78 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E07724F0E19900B99B78 /* Login.swift */; };
 		14E7E08124F21B7000B99B78 /* GymTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E08024F21B7000B99B78 /* GymTabViewController.swift */; };
+		14F963FD25315E300033ACA8 /* LevelDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F963FC25315E300033ACA8 /* LevelDescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		14E7E07524F0BE3B00B99B78 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		14E7E07724F0E19900B99B78 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		14E7E08024F21B7000B99B78 /* GymTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymTabViewController.swift; sourceTree = "<group>"; };
+		14F963FC25315E300033ACA8 /* LevelDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				14A5837C24946CD000B31437 /* JoinViewController.swift */,
 				14DCCC3324A6F0A30062C028 /* ProfileSetupViewController.swift */,
 				14DCCC3524A6F5EE0062C028 /* SearchFavoriteGymViewController.swift */,
+				14F963FC25315E300033ACA8 /* LevelDescriptionViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				1469D1E92431E2AA00445236 /* SceneDelegate.swift in Sources */,
 				14E7E07624F0BE3B00B99B78 /* UserManager.swift in Sources */,
 				1469D2852438280100445236 /* UIColor+.swift in Sources */,
+				14F963FD25315E300033ACA8 /* LevelDescriptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

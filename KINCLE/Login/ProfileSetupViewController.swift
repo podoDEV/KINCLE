@@ -14,6 +14,7 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var nickNameTextField: UITextField!
     @IBOutlet weak var levelPicker: UIPickerView!
     
@@ -92,14 +93,22 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
     }
     
     @IBAction func searchFavoriteGymButtonDidTap(_ sender: Any) {
-        let viewController = SearchFavoriteGymViewController.create()
+        let viewController = SearchFavoriteGymViewController.create(completion: { (selectedGym) in
+            print(selectedGym)
+            let titles = selectedGym.map { $0.name }.joined(separator: ",")
+            
+            self.searchButton.setTitle("\(titles)", for: .normal)
+        })
         let navigation = UINavigationController(rootViewController: viewController)
         navigation.modalPresentationStyle = .fullScreen
         self.present(navigation, animated: true, completion: nil)
     }
     
     @IBAction func levelDescriptionButtonDidTap(_ sender: Any) {
-        let view = UIImageView()
+        let viewController = LevelDescriptionViewController.create()
+        viewController.modalPresentationStyle = .overCurrentContext
+        self.present(viewController, animated: false, completion: nil)
+        
     }
     
     @IBAction func completeButtonDidTap(_ sender: Any) {
