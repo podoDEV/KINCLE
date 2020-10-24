@@ -107,14 +107,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kXM-vr-EJD">
-                                                    <rect key="frame" x="20" y="7" width="27" height="27"/>
+                                                    <rect key="frame" x="20" y="12" width="17" height="17"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="27" id="5II-5L-ZV3"/>
-                                                        <constraint firstAttribute="width" constant="27" id="TzL-D6-n4Z"/>
+                                                        <constraint firstAttribute="height" constant="17" id="5II-5L-ZV3"/>
+                                                        <constraint firstAttribute="width" constant="17" id="TzL-D6-n4Z"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asddasdasdasd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB6-a9-3ZG">
-                                                    <rect key="frame" x="62" y="10.5" width="120" height="20.5"/>
+                                                    <rect key="frame" x="52" y="10.5" width="120" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -161,6 +161,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eem-hJ-3ni" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-394.20289855072468" y="30.803571428571427"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="frO-2l-b8i">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xiW-7P-g3V" customClass="SettingsViewController" customModule="KINCLE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IEK-if-yLv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-40-nQu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Iv-o0-wZD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Se3-40-nQu" firstAttribute="leading" secondItem="0Iv-o0-wZD" secondAttribute="leading" id="LVg-Lk-mkL"/>
+                            <constraint firstItem="0Iv-o0-wZD" firstAttribute="bottom" secondItem="Se3-40-nQu" secondAttribute="bottom" id="s7f-rK-PNi"/>
+                            <constraint firstItem="0Iv-o0-wZD" firstAttribute="trailing" secondItem="Se3-40-nQu" secondAttribute="trailing" id="vyV-iV-v97"/>
+                            <constraint firstItem="Se3-40-nQu" firstAttribute="top" secondItem="0Iv-o0-wZD" secondAttribute="top" id="yfx-Rr-pFv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Se3-40-nQu" id="X7M-zx-dOj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qsK-Rp-BQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="31"/>
         </scene>
     </scenes>
     <resources>

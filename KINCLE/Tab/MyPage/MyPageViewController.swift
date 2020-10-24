@@ -10,6 +10,7 @@ class MyPageViewController: UIViewController {
         case savedProblems
         case space2
         case settings
+        case bottomPadding
     }
     
     @IBOutlet weak var tableView: UITableView!
@@ -32,6 +33,8 @@ class MyPageViewController: UIViewController {
     func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        self.tableView.separatorInset = .zero
     }
     
     @objc
@@ -54,34 +57,57 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
         print(indexPath.row)
         let section = Section(rawValue: indexPath.section)!
         switch section {
-        case .space1:
+        case .space1, .space2:
             let cell = UITableViewCell()
             return cell
         case .problemsMadeByMe:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageProblemTableViewCell", for: indexPath) as! MyPageProblemTableViewCell
             cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "plus"), title: "내가 등록한 문제 보기", count: 0))
-            
             return cell
         case .solvedProblems:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageProblemTableViewCell", for: indexPath) as! MyPageProblemTableViewCell
-            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "plus"), title: "내가 등록한 문제 보기", count: 0))
+            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "checkmark"), title: "내가 푼 문제 보기", count: 0))
             return cell
         case .savedProblems:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageProblemTableViewCell", for: indexPath) as! MyPageProblemTableViewCell
-            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "plus"), title: "내가 등록한 문제 보기", count: 0))
+            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "bookmark"), title: "저장한 문제 보기", count: 0))
             return cell
-        case .space2:
+        case .bottomPadding:
             let cell = UITableViewCell()
             return cell
         case .settings:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageProblemTableViewCell", for: indexPath) as! MyPageProblemTableViewCell
-            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "plus"), title: "내가 등록한 문제 보기", count: 0))
+            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "gearshape"), title: "환경설정", count: 0))
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        let section = Section(rawValue: indexPath.section)!
+        switch section {
+        case .problemsMadeByMe, .savedProblems, .solvedProblems, .settings:
+            return 50
+        case .space1, .space2:
+            return 10
+        case .bottomPadding:
+            return 100
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = Section(rawValue: indexPath.section)!
+        switch section {
+        case .space1, .space2, .bottomPadding:
+            return
+        case .problemsMadeByMe:
+            return
+        case .solvedProblems:
+            return
+        case .savedProblems:
+            return
+        case .settings:
+            let viewController = 
+        }
     }
 }
 
@@ -99,6 +125,7 @@ class MyPageProblemTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
     }
     
     override func prepareForReuse() {
@@ -106,7 +133,7 @@ class MyPageProblemTableViewCell: UITableViewCell {
     }
     
     func configure(configration: ProblemConfiguration) {
-        self.myImageView.image = configration.image
+        self.myImageView.image = configration.image?.withRenderingMode(.alwaysOriginal)
         self.titleLabel.text = configration.title
         self.countLabel.text = "\(configration.count)"
     }
