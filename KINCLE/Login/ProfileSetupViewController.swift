@@ -24,7 +24,10 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
     
     @IBOutlet weak var completeButton: UIButton!
     
+    
+    var selectedFavoriteGyms: [SearchResultGym] = []
     var profileInfo: ProfileInfo!
+    var cancellable =  Set<AnyCancellable>()
     
     static func create(email: String, password: String) -> ProfileSetupViewController {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
@@ -95,9 +98,9 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
     }
     
     @IBAction func searchFavoriteGymButtonDidTap(_ sender: Any) {
-        let viewController = SearchFavoriteGymViewController.create(completion: { (selectedGym) in
-            print(selectedGym)
-            let titles = selectedGym.map { $0.name }.joined(separator: ",")
+        let viewController = SearchFavoriteGymViewController.create(completion: { (gyms) in
+            self.selectedFavoriteGyms = gyms
+            let titles = gyms.map { $0.name }.joined(separator: ",")
             
             self.searchButton.setTitle("\(titles)", for: .normal)
         })
@@ -113,11 +116,16 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
     }
     
     @IBAction func completeButtonDidTap(_ sender: Any) {
+        
         // 1. 이미지 업로드
-        if let profileImage = self.profileImageButton.currentImage {
-            ApiManager.shared.uploadProfileImage(with: profileImage) { (response) in
-                print(response.imageUrl, "zedd")
-            }
+//        if let profileImage = self.profileImageButton.currentImage {
+//            ApiManager.shared.uploadProfileImage(with: profileImage) { (response) in
+//            }
+//        }
+        self.selectedFavoriteGyms.forEach {
+            ApiManager.shared.registerMyFavoriteGyms(gym: $0)?.sink(receiveValue: { (gym) in
+                
+            }).store(in: &self.cancellable)
         }
         // 2. 즐겨찾는 암장 업로드
         // 3. 회원가입.

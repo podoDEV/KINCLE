@@ -3,22 +3,111 @@ import UIKit
 
 class MyPageViewController: UIViewController {
 
+    enum Section: Int, CaseIterable {
+        case space1
+        case problemsMadeByMe
+        case solvedProblems
+        case savedProblems
+        case space2
+        case settings
+    }
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     static func create() -> MyPageViewController {
         let storyboard = UIStoryboard(name: "MyPage", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "MyPageViewController") as! MyPageViewController
         return viewController
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.setupTableView()
         self.title = "마이 페이지"
         self.view.backgroundColor = .white
         let edit = UIBarButtonItem(image: UIImage(named: ""), style: .plain, target: self, action: #selector(editButtonDidTap))
         // Do any additional setup after loading the view.
     }
     
+    func setupTableView() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+    
     @objc
     func editButtonDidTap() {
         
+    }
+}
+
+extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return Section.allCases.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(indexPath.row)
+        let section = Section(rawValue: indexPath.section)!
+        switch section {
+        case .space1:
+            let cell = UITableViewCell()
+            return cell
+        case .problemsMadeByMe:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageProblemTableViewCell", for: indexPath) as! MyPageProblemTableViewCell
+            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "plus"), title: "내가 등록한 문제 보기", count: 0))
+            
+            return cell
+        case .solvedProblems:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageProblemTableViewCell", for: indexPath) as! MyPageProblemTableViewCell
+            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "plus"), title: "내가 등록한 문제 보기", count: 0))
+            return cell
+        case .savedProblems:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageProblemTableViewCell", for: indexPath) as! MyPageProblemTableViewCell
+            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "plus"), title: "내가 등록한 문제 보기", count: 0))
+            return cell
+        case .space2:
+            let cell = UITableViewCell()
+            return cell
+        case .settings:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageProblemTableViewCell", for: indexPath) as! MyPageProblemTableViewCell
+            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "plus"), title: "내가 등록한 문제 보기", count: 0))
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+}
+
+struct ProblemConfiguration {
+    var image: UIImage?
+    var title: String
+    var count: Int
+}
+
+class MyPageProblemTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var myImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+    
+    func configure(configration: ProblemConfiguration) {
+        self.myImageView.image = configration.image
+        self.titleLabel.text = configration.title
+        self.countLabel.text = "\(configration.count)"
     }
 }

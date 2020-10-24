@@ -10,13 +10,13 @@ class SearchFavoriteGymViewController: BaseViewController, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
     var cancellable = Set<AnyCancellable>()
     
-    var gyms: [Gym] = []
-    var selectedGym: [Gym] = []
+    var gyms: [SearchResultGym] = []
+    var selectedGym: [SearchResultGym] = []
     
     var keyboardFrame: CGRect = .zero
-    var completion: (([Gym]) -> Void)?
+    var completion: (([SearchResultGym]) -> Void)?
     
-    static func create(completion: @escaping (([Gym]) -> Void)) -> SearchFavoriteGymViewController {
+    static func create(completion: @escaping (([SearchResultGym]) -> Void)) -> SearchFavoriteGymViewController {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "SearchFavoriteGymViewController") as! SearchFavoriteGymViewController
         viewController.completion = completion
@@ -144,7 +144,7 @@ class SearchFavoriteGymTableViewCell: UITableViewCell {
         super.prepareForReuse()
     }
     
-    func configure(gym: Gym) {
+    func configure(gym: SearchResultGym) {
         self.gymNameLabel.text = gym.name
         self.gymAddressLabel.text = gym.address
     }
@@ -179,7 +179,7 @@ class SelectedFavoriteGymCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
     }
     
-    func configure(gym: Gym) {
+    func configure(gym: SearchResultGym) {
         self.selectedGymButton.setTitle(gym.name, for: .normal)
         self.selectedGymButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
     }

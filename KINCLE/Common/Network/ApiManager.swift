@@ -61,9 +61,11 @@ class ApiManager {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = try? JSONSerialization.data(withJSONObject: parameters)
         return URLSession.shared.dataTaskPublisher(for: request)
-            .map(\.data)
-            .decode(type: RawResponse<T>.self, decoder: self.decoder)
-            .print()
+            .tryMap { result -> RawResponse<T> in
+                print(String(data: result.data, encoding: .utf8))
+                let value = try self.decoder.decode(RawResponse<T>.self, from: result.data)
+                return value
+            }
             .replaceError(with: RawResponse<T>())
             .eraseToAnyPublisher()
     }
@@ -117,7 +119,20 @@ extension ApiManager {
     }
 }
 
-// 즐겨찾는 암장
+// 즐겨찾는 암장 등록
+extension ApiManager {
+    
+    func registerMyFavoriteGyms(gym: SearchResultGym) -> Response<Gym>? {
+        let url = URL(string: "\(Key.apiHost)/v1/gyms")!
+        let parameters: [String: Any] = [
+            "address": gym.address,
+            "name": gym.name
+        ]
+        return self.post(url: url, parameters: parameters)
+    }
+}
+
+// 즐겨찾는 암장 검색
 extension ApiManager {
     
     func searchGym(query: String) -> AnyPublisher<GymDocument, Never> {

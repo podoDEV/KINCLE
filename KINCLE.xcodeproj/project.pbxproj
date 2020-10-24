@@ -23,6 +23,7 @@
 		149C0C64244AB0B7005B4E19 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0C63244AB0B7005B4E19 /* Response.swift */; };
 		14A5837D24946CD000B31437 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5837C24946CD000B31437 /* JoinViewController.swift */; };
 		14B5977024BAD37600FD2257 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5976F24BAD37600FD2257 /* Keys.swift */; };
+		14C6A9E82543C9D300E49B1D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C6A9E72543C9D300E49B1D /* LoginViewModel.swift */; };
 		14D55DDB25033456007EFE3E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 14D55DDA25033456007EFE3E /* Alamofire */; };
 		14D55DDE250339F3007EFE3E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D55DDD250339F3007EFE3E /* MyPageViewController.swift */; };
 		14D55DE025033A4B007EFE3E /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D55DDF25033A4B007EFE3E /* MyPage.storyboard */; };
@@ -59,6 +60,7 @@
 		149C0C63244AB0B7005B4E19 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		14A5837C24946CD000B31437 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		14B5976F24BAD37600FD2257 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		14C6A9E72543C9D300E49B1D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		14D55DDD250339F3007EFE3E /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		14D55DDF25033A4B007EFE3E /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		14D5746E244160C800DD96AA /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				14DCCC3324A6F0A30062C028 /* ProfileSetupViewController.swift */,
 				14DCCC3524A6F5EE0062C028 /* SearchFavoriteGymViewController.swift */,
 				14F963FC25315E300033ACA8 /* LevelDescriptionViewController.swift */,
+				14C6A9E72543C9D300E49B1D /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14C6A9E82543C9D300E49B1D /* LoginViewModel.swift in Sources */,
 				14A5837D24946CD000B31437 /* JoinViewController.swift in Sources */,
 				1401E44A250C722F001FAF92 /* ProfileInfo.swift in Sources */,
 				14D5746F244160C800DD96AA /* App.swift in Sources */,
