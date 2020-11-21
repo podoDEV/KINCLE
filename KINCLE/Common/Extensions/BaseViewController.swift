@@ -104,6 +104,10 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    deinit {
+        print("- deinit \(type(of: self))")
+    }
+    
     func updateNavigationBarAsTransparent() {
         if #available(iOS 13, *) {
             self.navigationController?.navigationBar.standardAppearance.configureWithTransparentBackground()

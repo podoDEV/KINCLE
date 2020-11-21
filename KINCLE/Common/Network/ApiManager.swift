@@ -91,7 +91,6 @@ class ApiManager {
             switch response.result {
             case let .success(data):
                 do {
-                    print(String(data: data, encoding: .utf8))
                     let decoder = JSONDecoder()
                     let object = try decoder.decode(RawResponse<T>.self, from: data)
                     completion(object.data!)
@@ -105,6 +104,29 @@ class ApiManager {
     }
 }
 
+extension ApiManager {
+    
+    func createMember(info: User) -> Response<User>? {
+        let url = URL(string: "\(Key.apiHost)/v1/members")!
+        let parameters: [String: Any] = [
+            "emailAddress": info.email,
+            "gymIds": info.gymIds,
+            "level": info.level,
+            "nickname": info.nickname,
+            "password": info.password,
+            "profileImageUrl": info.profileImageUrl,
+            "oauthType": info.oauthType.stringForServer
+        ]
+        return self.post(url: url, parameters: parameters)
+    }
+    
+    func getUser() -> Response<User> {
+        let url = URL(string: "\(Key.apiHost)/v1/members/me")!
+        let parameters: [String: Any] = [:]
+        return self.get(url: url, parameters: parameters)
+    }
+    
+}
 // MARK: 로그인
 extension ApiManager {
     

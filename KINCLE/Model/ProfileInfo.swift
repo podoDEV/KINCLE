@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ProfileInfo {
+class ProfileInfo: Decodable {
     
     var email: String
     var password: String

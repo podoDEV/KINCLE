@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1400E7EB2568B07400A8D41A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1400E7EA2568B07400A8D41A /* Kingfisher */; };
 		1401E448250C6F3D001FAF92 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1401E447250C6F3D001FAF92 /* Colors.xcassets */; };
 		1401E44A250C722F001FAF92 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401E449250C722F001FAF92 /* ProfileInfo.swift */; };
 		14292A2A24DE48A700FB8988 /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14292A2924DE48A700FB8988 /* ProblemViewController.swift */; };
@@ -22,6 +23,7 @@
 		149C0C62244A9C9B005B4E19 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0C61244A9C9B005B4E19 /* ApiManager.swift */; };
 		149C0C64244AB0B7005B4E19 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0C63244AB0B7005B4E19 /* Response.swift */; };
 		14A5837D24946CD000B31437 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5837C24946CD000B31437 /* JoinViewController.swift */; };
+		14A77A6725563C75001E0B21 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A77A6625563C75001E0B21 /* File.swift */; };
 		14B5977024BAD37600FD2257 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5976F24BAD37600FD2257 /* Keys.swift */; };
 		14C6A9E82543C9D300E49B1D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C6A9E72543C9D300E49B1D /* LoginViewModel.swift */; };
 		14C6A9F02543D77000E49B1D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C6A9EF2543D77000E49B1D /* SettingsViewController.swift */; };
@@ -38,6 +40,7 @@
 		14E7E07624F0BE3B00B99B78 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E07524F0BE3B00B99B78 /* UserManager.swift */; };
 		14E7E07824F0E19900B99B78 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E07724F0E19900B99B78 /* Login.swift */; };
 		14E7E08124F21B7000B99B78 /* GymTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E08024F21B7000B99B78 /* GymTabViewController.swift */; };
+		14F0F2F3255F7CC20043BD6C /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0F2F2255F7CC20043BD6C /* MyPageViewModel.swift */; };
 		14F963FD25315E300033ACA8 /* LevelDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F963FC25315E300033ACA8 /* LevelDescriptionViewController.swift */; };
 		14F9640025316A4E0033ACA8 /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F963FF25316A4E0033ACA8 /* ImageResponse.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +63,7 @@
 		149C0C61244A9C9B005B4E19 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		149C0C63244AB0B7005B4E19 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		14A5837C24946CD000B31437 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		14A77A6625563C75001E0B21 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		14B5976F24BAD37600FD2257 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		14C6A9E72543C9D300E49B1D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		14C6A9EF2543D77000E49B1D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 		14E7E07524F0BE3B00B99B78 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		14E7E07724F0E19900B99B78 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		14E7E08024F21B7000B99B78 /* GymTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymTabViewController.swift; sourceTree = "<group>"; };
+		14F0F2F2255F7CC20043BD6C /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
 		14F963FC25315E300033ACA8 /* LevelDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDescriptionViewController.swift; sourceTree = "<group>"; };
 		14F963FF25316A4E0033ACA8 /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1400E7EB2568B07400A8D41A /* Kingfisher in Frameworks */,
 				14D574742441AEE900DD96AA /* SnapKit in Frameworks */,
 				14D55DDB25033456007EFE3E /* Alamofire in Frameworks */,
 			);
@@ -169,6 +175,7 @@
 				1469D2872438381A00445236 /* Gym.swift */,
 				1401E449250C722F001FAF92 /* ProfileInfo.swift */,
 				14F963FF25316A4E0033ACA8 /* ImageResponse.swift */,
+				14A77A6625563C75001E0B21 /* File.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +195,7 @@
 				14D55DDF25033A4B007EFE3E /* MyPage.storyboard */,
 				14D55DDD250339F3007EFE3E /* MyPageViewController.swift */,
 				14C6A9EF2543D77000E49B1D /* SettingsViewController.swift */,
+				14F0F2F2255F7CC20043BD6C /* MyPageViewModel.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -261,6 +269,7 @@
 			packageProductDependencies = (
 				14D574732441AEE900DD96AA /* SnapKit */,
 				14D55DDA25033456007EFE3E /* Alamofire */,
+				1400E7EA2568B07400A8D41A /* Kingfisher */,
 			);
 			productName = KINCLE;
 			productReference = 1469D1E32431E2AA00445236 /* KINCLE.app */;
@@ -293,6 +302,7 @@
 			packageReferences = (
 				14D574722441AEE900DD96AA /* XCRemoteSwiftPackageReference "SnapKit" */,
 				14D55DD925033456007EFE3E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1400E7E92568B07400A8D41A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 1469D1E42431E2AA00445236 /* Products */;
 			projectDirPath = "";
@@ -325,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A77A6725563C75001E0B21 /* File.swift in Sources */,
 				14C6A9E82543C9D300E49B1D /* LoginViewModel.swift in Sources */,
 				14A5837D24946CD000B31437 /* JoinViewController.swift in Sources */,
 				1401E44A250C722F001FAF92 /* ProfileInfo.swift in Sources */,
@@ -337,6 +348,7 @@
 				14292A2A24DE48A700FB8988 /* ProblemViewController.swift in Sources */,
 				1469D1FB2431E72700445236 /* MainTabViewController.swift in Sources */,
 				1469D1E72431E2AA00445236 /* AppDelegate.swift in Sources */,
+				14F0F2F3255F7CC20043BD6C /* MyPageViewModel.swift in Sources */,
 				149C0C64244AB0B7005B4E19 /* Response.swift in Sources */,
 				1469D2882438381A00445236 /* Gym.swift in Sources */,
 				14DCCC3624A6F5EE0062C028 /* SearchFavoriteGymViewController.swift in Sources */,
@@ -548,6 +560,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1400E7E92568B07400A8D41A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.7;
+			};
+		};
 		14D55DD925033456007EFE3E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -567,6 +587,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1400E7EA2568B07400A8D41A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1400E7E92568B07400A8D41A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		14D55DDA25033456007EFE3E /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 14D55DD925033456007EFE3E /* XCRemoteSwiftPackageReference "Alamofire" */;

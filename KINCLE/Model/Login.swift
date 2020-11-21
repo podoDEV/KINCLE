@@ -2,8 +2,8 @@
 import Combine
 import UIKit
 
-enum OAuthType {
-    
+enum OAuthType: String, Decodable {
+
     case email
     case apple
     

@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -99,7 +99,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyPageProblemTableViewCell" rowHeight="41" id="EFA-I8-Ty6" customClass="MyPageProblemTableViewCell" customModule="KINCLE" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsImageTitleTableViewCell" rowHeight="41" id="EFA-I8-Ty6" customClass="SettingsImageTitleTableViewCell" customModule="KINCLE" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="436" width="414" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EFA-I8-Ty6" id="Cwg-fb-KKF">
@@ -155,6 +155,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="favoritGymLabel1" destination="gUQ-0e-JL7" id="xBb-Hq-Kzp"/>
+                        <outlet property="favoriteGymLabel2" destination="qub-mE-pfH" id="vOh-6m-X8s"/>
+                        <outlet property="favoriteGymLabel3" destination="hDh-fj-7Wi" id="BHA-d1-aMC"/>
+                        <outlet property="favoriteGymTitleLabel" destination="B4q-GY-nOV" id="ZGu-Gz-LQ8"/>
+                        <outlet property="levelLabel" destination="yDQ-nR-A0b" id="MwS-i7-wuz"/>
+                        <outlet property="nickNameLabel" destination="4m2-KR-Tr3" id="DLk-L0-fdg"/>
+                        <outlet property="profileImageView" destination="pwZ-0v-XU5" id="Tp8-Xq-0uu"/>
                         <outlet property="tableView" destination="43E-N6-YaY" id="AXc-dK-xfB"/>
                     </connections>
                 </viewController>

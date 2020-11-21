@@ -12,7 +12,8 @@ import Combine
 class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable, UITableViewDelegate {
     
     var titleView: FadeTitleButton!
-    
+    var viewModel: LoginViewModel!
+
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var searchButton: UIButton!
@@ -24,15 +25,13 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
     
     @IBOutlet weak var completeButton: UIButton!
     
-    
     var selectedFavoriteGyms: [SearchResultGym] = []
-    var profileInfo: ProfileInfo!
     var cancellable =  Set<AnyCancellable>()
     
     static func create(email: String, password: String) -> ProfileSetupViewController {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let viewControlelr = storyboard.instantiateViewController(identifier: "ProfileSetupViewController") as! ProfileSetupViewController
-        viewControlelr.profileInfo = ProfileInfo(email: email, password: password)
+        viewControlelr.viewModel = LoginViewModel(email: email, pw: password)
         return viewControlelr
     }
     
@@ -116,19 +115,8 @@ class ProfileSetupViewController: BaseViewController, FadeNavigationPresentable,
     }
     
     @IBAction func completeButtonDidTap(_ sender: Any) {
-        
-        // 1. 이미지 업로드
-//        if let profileImage = self.profileImageButton.currentImage {
-//            ApiManager.shared.uploadProfileImage(with: profileImage) { (response) in
-//            }
-//        }
-        self.selectedFavoriteGyms.forEach {
-            ApiManager.shared.registerMyFavoriteGyms(gym: $0)?.sink(receiveValue: { (gym) in
-                
-            }).store(in: &self.cancellable)
-        }
-        // 2. 즐겨찾는 암장 업로드
-        // 3. 회원가입.
+        self.viewModel.info.nickname = self.nickNameTextField.text ?? ""
+        self.viewModel.createMember(gyms: self.selectedFavoriteGyms, profileImage: self.profileImageButton.currentImage)
     }
     
     @objc
@@ -160,6 +148,10 @@ extension ProfileSetupViewController: UIPickerViewDelegate, UIPickerViewDataSour
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 5
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.viewModel.info.level = row + 1
     }
 }
 

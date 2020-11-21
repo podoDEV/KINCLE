@@ -1,7 +1,25 @@
 
 import UIKit
+import Combine
 
-class MyPageViewController: UIViewController {
+import Kingfisher
+
+class MyPageViewController: BaseViewController {
+
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var nickNameLabel: UILabel!
+    
+    @IBOutlet weak var favoriteGymTitleLabel: UILabel!
+    
+    @IBOutlet weak var favoritGymLabel1: UILabel!
+    @IBOutlet weak var favoriteGymLabel2: UILabel!
+    @IBOutlet weak var favoriteGymLabel3: UILabel!
+    
+    var viewModel: MyPageViewModel = MyPageViewModel()
+    
+    var cancellable =  Set<AnyCancellable>()
 
     enum Section: Int, CaseIterable {
         case space1
@@ -26,8 +44,17 @@ class MyPageViewController: UIViewController {
         self.setupTableView()
         self.title = "마이 페이지"
         self.view.backgroundColor = .white
-        let edit = UIBarButtonItem(image: UIImage(named: ""), style: .plain, target: self, action: #selector(editButtonDidTap))
-        // Do any additional setup after loading the view.
+        let edit = UIBarButtonItem(image: UIImage(systemName: "square.and.pencil")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(editButtonDidTap))
+        self.navigationItem.rightBarButtonItem = edit
+        
+        self.observeModel()
+    }
+    
+    func observeModel() {
+        self.viewModel.userStream.sink {
+            self.updateView()
+            self.tableView.reloadData()
+        }.store(in: &self.cancellable)
     }
     
     func setupTableView() {
@@ -41,9 +68,24 @@ class MyPageViewController: UIViewController {
     func editButtonDidTap() {
         
     }
+    
+    func updateView() {
+        if let profileImageUrl = self.viewModel.user.profileImageUrl, let url = URL(string: profileImageUrl) {
+            self.profileImageView.kf.setImage(with: url)
+        }
+        
+    }
 }
 
 extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > 0 {
+            self.updateNavigationBarAsDefault()
+        } else {
+            self.updateNavigationBarAsTransparent()
+        }
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return Section.allCases.count
@@ -61,23 +103,23 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = UITableViewCell()
             return cell
         case .problemsMadeByMe:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageProblemTableViewCell", for: indexPath) as! MyPageProblemTableViewCell
-            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "plus"), title: "내가 등록한 문제 보기", count: 0))
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsImageTitleTableViewCell", for: indexPath) as! SettingsImageTitleTableViewCell
+            cell.configure(configration: SettinsCellConfiguration(image: UIImage(systemName: "plus"), title: "내가 등록한 문제 보기", subtitle: "0"))
             return cell
         case .solvedProblems:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageProblemTableViewCell", for: indexPath) as! MyPageProblemTableViewCell
-            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "checkmark"), title: "내가 푼 문제 보기", count: 0))
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsImageTitleTableViewCell", for: indexPath) as! SettingsImageTitleTableViewCell
+            cell.configure(configration: SettinsCellConfiguration(image: UIImage(systemName: "checkmark"), title: "내가 푼 문제 보기", subtitle: "0"))
             return cell
         case .savedProblems:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageProblemTableViewCell", for: indexPath) as! MyPageProblemTableViewCell
-            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "bookmark"), title: "저장한 문제 보기", count: 0))
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsImageTitleTableViewCell", for: indexPath) as! SettingsImageTitleTableViewCell
+            cell.configure(configration: SettinsCellConfiguration(image: UIImage(systemName: "bookmark"), title: "저장한 문제 보기", subtitle: "0"))
             return cell
         case .bottomPadding:
             let cell = UITableViewCell()
             return cell
         case .settings:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageProblemTableViewCell", for: indexPath) as! MyPageProblemTableViewCell
-            cell.configure(configration: ProblemConfiguration(image: UIImage(systemName: "gearshape"), title: "환경설정", count: 0))
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsImageTitleTableViewCell", for: indexPath) as! SettingsImageTitleTableViewCell
+            cell.configure(configration: SettinsCellConfiguration(image: UIImage(systemName: "gearshape"), title: "환경설정", subtitle: nil))
             return cell
         }
     }
@@ -106,18 +148,19 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
         case .savedProblems:
             return
         case .settings:
-            let viewController = 
+            let viewController = SettingsViewController.create()
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }
 
-struct ProblemConfiguration {
+struct SettinsCellConfiguration {
     var image: UIImage?
     var title: String
-    var count: Int
+    var subtitle: String?
 }
 
-class MyPageProblemTableViewCell: UITableViewCell {
+class SettingsImageTitleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -132,9 +175,13 @@ class MyPageProblemTableViewCell: UITableViewCell {
         super.prepareForReuse()
     }
     
-    func configure(configration: ProblemConfiguration) {
+    func configure(configration: SettinsCellConfiguration) {
         self.myImageView.image = configration.image?.withRenderingMode(.alwaysOriginal)
         self.titleLabel.text = configration.title
-        self.countLabel.text = "\(configration.count)"
+        if let subtitle = configration.subtitle {
+            self.countLabel.text = subtitle
+        } else {
+            self.countLabel.text = nil
+        }
     }
 }

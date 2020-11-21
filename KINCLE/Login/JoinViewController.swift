@@ -133,7 +133,7 @@ class JoinViewController: BaseViewController, UITextFieldDelegate {
     }
     
     func isValidPw(of text: String) -> String? {
-        let pwRegEx = "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[0-9]).{8,}$"
+        let pwRegEx = "^(?=.*[a-z])(?=.*[0-9]).{8,}$"
         let pwPred = NSPredicate(format:"SELF MATCHES %@", pwRegEx)
         let isValid = pwPred.evaluate(with: text)
         if isValid {
