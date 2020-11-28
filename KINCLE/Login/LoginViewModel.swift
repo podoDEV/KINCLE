@@ -26,10 +26,12 @@ class LoginViewModel {
                     UserManager.shared.accessToken = token
                 }
                 UserManager.shared.accessToken = response.data?.token
-                
+                DispatchQueue.main.async {
+                    guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate, let window = delegate.window else { return  }
+                    window.rootViewController = MainTabViewController.create()
+                    window.makeKeyAndVisible()
+                }
                 // 현재 화면 닫고
-                // email, pw가지고 login api부르기
-                // 
             }).store(in: &self.cancellable)
         }.store(in: &self.cancellable)
         self.registerGyms(gyms: gyms)

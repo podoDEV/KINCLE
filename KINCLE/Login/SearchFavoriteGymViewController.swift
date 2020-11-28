@@ -29,6 +29,7 @@ class SearchFavoriteGymViewController: BaseViewController, UISearchBarDelegate {
         self.setupSearchBar()
         self.setupCollectionView()
         self.setupTableView()
+    
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -68,6 +69,8 @@ class SearchFavoriteGymViewController: BaseViewController, UISearchBarDelegate {
     func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.separatorInset = .zero
+        self.tableView.tableFooterView = UIView()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
