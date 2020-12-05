@@ -8,6 +8,10 @@ import Foundation
     var userStream = PassthroughSubject<Void, Never>()
     var cancellable =  Set<AnyCancellable>()
     
+    init() {
+        self.getUser()
+    }
+    
     func getUser() {
         ApiManager.shared.getUser().sink { (response) in
             if let response = response.data {
@@ -15,9 +19,5 @@ import Foundation
                 self.userStream.send(())
             }
         }.store(in: &self.cancellable)
-    }
-    
-    init() {
-        self.getUser()
     }
  }

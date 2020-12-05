@@ -123,6 +123,7 @@ extension ApiManager {
     func getUser() -> Response<User> {
         let url = URL(string: "\(Key.apiHost)/v1/members/me")!
         let parameters: [String: Any] = [:]
+        print("zedd")
         return self.get(url: url, parameters: parameters)
     }
     

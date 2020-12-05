@@ -31,7 +31,6 @@ class LoginViewModel {
                     window.rootViewController = MainTabViewController.create()
                     window.makeKeyAndVisible()
                 }
-                // 현재 화면 닫고
             }).store(in: &self.cancellable)
         }.store(in: &self.cancellable)
         self.registerGyms(gyms: gyms)

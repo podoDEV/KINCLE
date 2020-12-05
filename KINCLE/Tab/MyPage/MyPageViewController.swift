@@ -41,13 +41,40 @@ class MyPageViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupTableView()
-        self.title = "마이 페이지"
         self.view.backgroundColor = .white
+
+        self.setupNavigation()
+        self.setupTableView()
+        self.setupProfileImageView()
+        self.setupProfileLabels()
+        self.observeModel()
+    }
+    
+    func setupNavigation() {
+        self.title = "마이 페이지"
         let edit = UIBarButtonItem(image: UIImage(systemName: "square.and.pencil")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(editButtonDidTap))
         self.navigationItem.rightBarButtonItem = edit
+    }
+
+    func setupTableView() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
-        self.observeModel()
+        self.tableView.separatorInset = .zero
+        self.tableView.separatorStyle = .none
+    }
+    
+    func setupProfileImageView() {
+        self.profileImageView.layer.borderWidth = 0.5
+        self.profileImageView.layer.borderColor = UIColor(hex: "#dddddd").cgColor
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height / 2
+    }
+    
+    func setupProfileLabels() {
+        self.nickNameLabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        self.levelLabel.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        self.levelLabel.textColor = App.Color.accent
+        self.favoriteGymTitleLabel.font = UIFont.systemFont(ofSize: 14, weight: .medium)
     }
     
     func observeModel() {
@@ -57,12 +84,6 @@ class MyPageViewController: BaseViewController {
         }.store(in: &self.cancellable)
     }
     
-    func setupTableView() {
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        
-        self.tableView.separatorInset = .zero
-    }
     
     @objc
     func editButtonDidTap() {
@@ -73,7 +94,6 @@ class MyPageViewController: BaseViewController {
         if let profileImageUrl = self.viewModel.user.profileImageUrl, let url = URL(string: profileImageUrl) {
             self.profileImageView.kf.setImage(with: url)
         }
-        
     }
 }
 
@@ -101,6 +121,7 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
         switch section {
         case .space1, .space2:
             let cell = UITableViewCell()
+            cell.backgroundColor = UIColor(hex: "#f8f8f8")
             return cell
         case .problemsMadeByMe:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsImageTitleTableViewCell", for: indexPath) as! SettingsImageTitleTableViewCell
@@ -169,10 +190,16 @@ class SettingsImageTitleTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
+        self.setupView()
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
+    }
+    
+    func setupView() {
+        self.titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        self.countLabel.font = UIFont.systemFont(ofSize: 14, weight: .light)
     }
     
     func configure(configration: SettinsCellConfiguration) {
