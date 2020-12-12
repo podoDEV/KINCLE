@@ -40,6 +40,9 @@
 		14E7E07624F0BE3B00B99B78 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E07524F0BE3B00B99B78 /* UserManager.swift */; };
 		14E7E07824F0E19900B99B78 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E07724F0E19900B99B78 /* Login.swift */; };
 		14E7E08124F21B7000B99B78 /* GymTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7E08024F21B7000B99B78 /* GymTabViewController.swift */; };
+		14EC9DEA257B281E00BA9926 /* SettingsImageTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC9DE8257B281E00BA9926 /* SettingsImageTitleTableViewCell.swift */; };
+		14EC9DEB257B281E00BA9926 /* SettingsImageTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EC9DE9257B281E00BA9926 /* SettingsImageTitleTableViewCell.xib */; };
+		14EC9DEE257B2B3C00BA9926 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EC9DED257B2B3C00BA9926 /* NibLoadable.swift */; };
 		14F0F2F3255F7CC20043BD6C /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0F2F2255F7CC20043BD6C /* MyPageViewModel.swift */; };
 		14F963FD25315E300033ACA8 /* LevelDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F963FC25315E300033ACA8 /* LevelDescriptionViewController.swift */; };
 		14F9640025316A4E0033ACA8 /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F963FF25316A4E0033ACA8 /* ImageResponse.swift */; };
@@ -78,6 +81,9 @@
 		14E7E07524F0BE3B00B99B78 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		14E7E07724F0E19900B99B78 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		14E7E08024F21B7000B99B78 /* GymTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymTabViewController.swift; sourceTree = "<group>"; };
+		14EC9DE8257B281E00BA9926 /* SettingsImageTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsImageTitleTableViewCell.swift; sourceTree = "<group>"; };
+		14EC9DE9257B281E00BA9926 /* SettingsImageTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsImageTitleTableViewCell.xib; sourceTree = "<group>"; };
+		14EC9DED257B2B3C00BA9926 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		14F0F2F2255F7CC20043BD6C /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
 		14F963FC25315E300033ACA8 /* LevelDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDescriptionViewController.swift; sourceTree = "<group>"; };
 		14F963FF25316A4E0033ACA8 /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
@@ -164,6 +170,7 @@
 				1469D2842438280100445236 /* UIColor+.swift */,
 				14D5746E244160C800DD96AA /* App.swift */,
 				14DCCC3124A6E9FA0062C028 /* BaseViewController.swift */,
+				14EC9DED257B2B3C00BA9926 /* NibLoadable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -196,6 +203,8 @@
 				14D55DDD250339F3007EFE3E /* MyPageViewController.swift */,
 				14C6A9EF2543D77000E49B1D /* SettingsViewController.swift */,
 				14F0F2F2255F7CC20043BD6C /* MyPageViewModel.swift */,
+				14EC9DE8257B281E00BA9926 /* SettingsImageTitleTableViewCell.swift */,
+				14EC9DE9257B281E00BA9926 /* SettingsImageTitleTableViewCell.xib */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -323,6 +332,7 @@
 				14E227E1246F845F00FFD7A0 /* Login.storyboard in Resources */,
 				1469D1F02431E2AE00445236 /* Assets.xcassets in Resources */,
 				14292A2C24DE48B000FB8988 /* Gym.storyboard in Resources */,
+				14EC9DEB257B281E00BA9926 /* SettingsImageTitleTableViewCell.xib in Resources */,
 				1469D1EE2431E2AA00445236 /* Main.storyboard in Resources */,
 				1401E448250C6F3D001FAF92 /* Colors.xcassets in Resources */,
 			);
@@ -344,6 +354,7 @@
 				14F9640025316A4E0033ACA8 /* ImageResponse.swift in Sources */,
 				14E7E08124F21B7000B99B78 /* GymTabViewController.swift in Sources */,
 				149C0C62244A9C9B005B4E19 /* ApiManager.swift in Sources */,
+				14EC9DEE257B2B3C00BA9926 /* NibLoadable.swift in Sources */,
 				14DCCC3224A6E9FA0062C028 /* BaseViewController.swift in Sources */,
 				14292A2A24DE48A700FB8988 /* ProblemViewController.swift in Sources */,
 				1469D1FB2431E72700445236 /* MainTabViewController.swift in Sources */,
@@ -360,6 +371,7 @@
 				14E7E07624F0BE3B00B99B78 /* UserManager.swift in Sources */,
 				1469D2852438280100445236 /* UIColor+.swift in Sources */,
 				14F963FD25315E300033ACA8 /* LevelDescriptionViewController.swift in Sources */,
+				14EC9DEA257B281E00BA9926 /* SettingsImageTitleTableViewCell.swift in Sources */,
 				14C6A9F02543D77000E49B1D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

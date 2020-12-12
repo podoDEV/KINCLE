@@ -10,6 +10,7 @@ class SettingsViewController: UIViewController {
         case feedback
         case space2
         case logout
+        case space3
     }
     
     static func create() -> SettingsViewController {
@@ -28,8 +29,11 @@ class SettingsViewController: UIViewController {
     func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(SettingsImageTitleTableViewCell.self, forCellReuseIdentifier: "SettingsImageTitleTableViewCell")
+        self.tableView.register(SettingsImageTitleTableViewCell.self)
         self.tableView.tableFooterView = UIView()
+        self.tableView.separatorInset = .zero
+        
+        self.tableView.separatorColor = UIColor(hex: "#dbdbdb")
     }
 }
 
@@ -46,9 +50,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = Section(rawValue: indexPath.section)!
         switch section {
-        case .space1, .space2:
+        case .space1, .space2, .space3:
             let cell = UITableViewCell()
-            cell.backgroundColor = UIColor(hex: "#dbdbdb")
+            cell.backgroundColor = UIColor(hex: "#f8f8f8")
             return cell
         case .info:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsImageTitleTableViewCell", for: indexPath) as! SettingsImageTitleTableViewCell
@@ -71,10 +75,25 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch Section(rawValue: indexPath.section)! {
-        case .space1, .space2:
+        case .space1, .space2, .space3:
             return 10
         default:
             return 50
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch Section(rawValue: indexPath.section)! {
+        case .logout:
+            UserManager.shared.accessToken = nil
+            DispatchQueue.main.async {
+                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate, let window = delegate.window else { return  }
+                window.rootViewController = LoginViewController.create()
+                window.makeKeyAndVisible()
+            }
+        default:
+            return
+        }
+    }
 }
+
