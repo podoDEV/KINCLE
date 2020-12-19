@@ -34,7 +34,7 @@ class Gym: Decodable {
         self.id = (try? container.decode(Int.self, forKey: .id)) ?? 0
         self.gymId = (try? container.decode(Int.self, forKey: .gymId)) ?? 0
         self.name = try container.decode(String.self, forKey: .name)
-        self.address = try container.decode(String.self, forKey: .address)
+        self.address = (try? container.decode(String.self, forKey: .address)) ?? ""
     }
 }
 

@@ -28,7 +28,7 @@ class LoginViewModel {
                     UserManager.shared.accessToken = token
                     DispatchQueue.main.async {
                         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate, let window = delegate.window else { return  }
-                        window.rootViewController = MainTabViewController.create()
+                        window.rootViewController = UINavigationController(rootViewController: MainTabViewController.create()) 
                         window.makeKeyAndVisible()
                     }
                 } else {

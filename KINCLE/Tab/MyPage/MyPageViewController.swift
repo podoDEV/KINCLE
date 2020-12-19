@@ -5,7 +5,7 @@ import Combine
 import Kingfisher
 
 class MyPageViewController: BaseViewController {
-
+    
     @IBOutlet weak var profileImageView: UIImageView!
     
     @IBOutlet weak var levelLabel: UILabel!
@@ -17,10 +17,12 @@ class MyPageViewController: BaseViewController {
     @IBOutlet weak var favoriteGymLabel2: UILabel!
     @IBOutlet weak var favoriteGymLabel3: UILabel!
     
+    @IBOutlet var favoriteGymLabels: [UILabel]!
+    
     var viewModel: MyPageViewModel = MyPageViewModel()
     
     var cancellable =  Set<AnyCancellable>()
-
+    
     enum Section: Int, CaseIterable {
         case space1
         case problemsMadeByMe
@@ -41,8 +43,9 @@ class MyPageViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.view.backgroundColor = .white
-
+        
         self.setupNavigation()
         self.setupTableView()
         self.setupProfileImageView()
@@ -58,7 +61,7 @@ class MyPageViewController: BaseViewController {
         self.navigationItem.rightBarButtonItem = edit
         self.navigationController?.navigationBar.tintColor = .black
     }
-
+    
     func setupTableView() {
         self.tableView.register(UINib(nibName: "SettingsImageTitleTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingsImageTitleTableViewCell")
         self.tableView.delegate = self
@@ -83,10 +86,12 @@ class MyPageViewController: BaseViewController {
     }
     
     func observeModel() {
-        self.viewModel.userStream.receive(on: DispatchQueue.main).sink {
-            self.updateView()
-            self.tableView.reloadData()
-        }.store(in: &self.cancellable)
+        self.viewModel.userStream
+            .receive(on: DispatchQueue.main)
+            .sink {
+                self.updateView()
+                self.tableView.reloadData()
+            }.store(in: &self.cancellable)
     }
     
     
@@ -101,7 +106,20 @@ class MyPageViewController: BaseViewController {
             self.profileImageView.kf.setImage(with: url)
         }
         self.nickNameLabel.text = user.nickname
-        self.levelLabel.text = "\(user.level)"
+        self.levelLabel.text = "Level. \(user.level)"
+        for label in self.favoriteGymLabels {
+            label.font = UIFont.systemFont(ofSize: 14, weight: .light)
+            label.text = nil
+            label.textColor = .black
+        }
+        
+        for (index, gym) in user.gyms.enumerated() {
+            self.favoriteGymLabels[index].text = gym.name
+        }
+        
+        for i in self.favoriteGymLabels {
+            if i.text == nil { i.isHidden = true }
+        }
     }
 }
 
