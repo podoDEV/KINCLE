@@ -88,7 +88,8 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             UserManager.shared.accessToken = nil
             DispatchQueue.main.async {
                 guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate, let window = delegate.window else { return  }
-                window.rootViewController = LoginViewController.create()
+                window.rootViewController =
+                    UINavigationController(rootViewController: LoginViewController.create())
                 window.makeKeyAndVisible()
             }
         default:

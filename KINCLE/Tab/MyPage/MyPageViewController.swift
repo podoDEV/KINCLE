@@ -48,12 +48,15 @@ class MyPageViewController: BaseViewController {
         self.setupProfileImageView()
         self.setupProfileLabels()
         self.observeModel()
+        
+        self.viewModel.getUser()
     }
     
     func setupNavigation() {
         self.title = "마이 페이지"
         let edit = UIBarButtonItem(image: UIImage(systemName: "square.and.pencil")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(editButtonDidTap))
         self.navigationItem.rightBarButtonItem = edit
+        self.navigationController?.navigationBar.tintColor = .black
     }
 
     func setupTableView() {
@@ -66,6 +69,7 @@ class MyPageViewController: BaseViewController {
     }
     
     func setupProfileImageView() {
+        self.profileImageView.contentMode = .scaleAspectFill
         self.profileImageView.layer.borderWidth = 0.5
         self.profileImageView.layer.borderColor = UIColor(hex: "#dddddd").cgColor
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height / 2
@@ -79,7 +83,7 @@ class MyPageViewController: BaseViewController {
     }
     
     func observeModel() {
-        self.viewModel.userStream.sink {
+        self.viewModel.userStream.receive(on: DispatchQueue.main).sink {
             self.updateView()
             self.tableView.reloadData()
         }.store(in: &self.cancellable)
@@ -92,9 +96,12 @@ class MyPageViewController: BaseViewController {
     }
     
     func updateView() {
-        if let profileImageUrl = self.viewModel.user.profileImageUrl, let url = URL(string: profileImageUrl) {
+        let user = self.viewModel.user
+        if let profileImageUrl = user.profileImageUrl, let url = URL(string: profileImageUrl) {
             self.profileImageView.kf.setImage(with: url)
         }
+        self.nickNameLabel.text = user.nickname
+        self.levelLabel.text = "\(user.level)"
     }
 }
 
@@ -117,7 +124,6 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(indexPath.row)
         let section = Section(rawValue: indexPath.section)!
         switch section {
         case .space1, .space2:

@@ -59,8 +59,8 @@ class LoginViewController: BaseViewController {
         self.passwordTextField.isSecureTextEntry = true
         
         #if DEBUG
-        self.idTextField.text = "tjsehgud@naver.com"
-        self.passwordTextField.text = "admin"
+        self.idTextField.text = "zeddtest@gmail.com"
+        self.passwordTextField.text = "zeddtest123@@"
         #endif
     }
     
@@ -107,13 +107,15 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func loginButtonDidTap(_ sender: Any) {
-        self.cancellable = ApiManager.shared.login(email: "tjsehgud@naver.com", password: "admin", type: .email)?
-            .sink(receiveValue: { (result) in
-                if result.code == 200 {
-                    UserManager.shared.accessToken = result.data?.token
-                    self.switchToMainTab()
-                }
-            })
+        if let email = self.idTextField.text, let pw = self.passwordTextField.text {
+            self.cancellable = ApiManager.shared.login(email: email, password: pw, type: .email)?
+                .sink(receiveValue: { (result) in
+                    if result.code == 200 {
+                        UserManager.shared.accessToken = result.data?.token
+                        self.switchToMainTab()
+                    }
+                })
+        }
     }
     
     func switchToMainTab() {

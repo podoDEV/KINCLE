@@ -47,22 +47,39 @@ class ApiManager {
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        if let token = UserManager.shared.accessToken {
+            request.addValue(token, forHTTPHeaderField: "X-Auth-Token")
+        }
         return URLSession.shared.dataTaskPublisher(for: request)
-            .map(\.data)
-            .decode(type: RawResponse<T>.self, decoder: self.decoder)
+            .tryMap { result -> RawResponse<T> in
+                print(String(data: result.data, encoding: .utf8))
+                let value = try self.decoder.decode(RawResponse<T>.self, from: result.data)
+                return value
+            }
             .replaceError(with: RawResponse<T>())
             .eraseToAnyPublisher()
     }
     
-    func post<T: Decodable>(url: URL, parameters: [String: Any]?) -> Response<T>? {
+    func post<T: Decodable>(url: URL, parameters: [String: Any]?, printBody: Bool = false) -> Response<T>? {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        if let token = UserManager.shared.accessToken {
+            request.addValue(token, forHTTPHeaderField: "X-Auth-Token")
+        }
         request.httpBody = try? JSONSerialization.data(withJSONObject: parameters)
         return URLSession.shared.dataTaskPublisher(for: request)
             .tryMap { result -> RawResponse<T> in
-                print(String(data: result.data, encoding: .utf8))
+                if printBody {
+                    guard let response = result.response as? HTTPURLResponse else { return RawResponse<T>() }
+                    let code = response.statusCode
+                    if 200..<300 ~= code {
+                        print("✅ \(String(describing: String(data: result.data, encoding: .utf8)))")
+                    } else {
+                        print("❌ [\(code)] \(String(describing: String(data: result.data, encoding: .utf8)))")
+                    }
+                }
                 let value = try self.decoder.decode(RawResponse<T>.self, from: result.data)
                 return value
             }
@@ -108,22 +125,23 @@ extension ApiManager {
     
     func createMember(info: User) -> Response<User>? {
         let url = URL(string: "\(Key.apiHost)/v1/members")!
-        let parameters: [String: Any] = [
+        var parameters: [String: Any] = [
             "emailAddress": info.email,
             "gymIds": info.gymIds,
             "level": info.level,
             "nickname": info.nickname,
             "password": info.password,
-            "profileImageUrl": info.profileImageUrl,
             "oauthType": info.oauthType.stringForServer
         ]
-        return self.post(url: url, parameters: parameters)
+        if let imageURL = info.profileImageUrl {
+            parameters["profileImageUrl"] = imageURL
+        }
+        return self.post(url: url, parameters: parameters, printBody: true)
     }
     
     func getUser() -> Response<User> {
         let url = URL(string: "\(Key.apiHost)/v1/members/me")!
         let parameters: [String: Any] = [:]
-        print("zedd")
         return self.get(url: url, parameters: parameters)
     }
     
@@ -151,7 +169,7 @@ extension ApiManager {
             "address": gym.address,
             "name": gym.name
         ]
-        return self.post(url: url, parameters: parameters)
+        return self.post(url: url, parameters: parameters, printBody: true)
     }
 }
 

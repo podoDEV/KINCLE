@@ -17,9 +17,25 @@ class GymDocument: Decodable {
 
 class Gym: Decodable {
     
+    var id: Int = 0
     var gymId: Int = 0
     var name: String = "홍대 더클라임"
     var address: String = "서울특별시 마포구 서교동 353 어쩌고 저쩌고"
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case gymId
+        case name
+        case address
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = (try? container.decode(Int.self, forKey: .id)) ?? 0
+        self.gymId = (try? container.decode(Int.self, forKey: .gymId)) ?? 0
+        self.name = try container.decode(String.self, forKey: .name)
+        self.address = try container.decode(String.self, forKey: .address)
+    }
 }
 
 class SearchResultGym: Decodable {

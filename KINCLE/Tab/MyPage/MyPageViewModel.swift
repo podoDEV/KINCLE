@@ -9,12 +9,13 @@ import Foundation
     var cancellable =  Set<AnyCancellable>()
     
     init() {
-        self.getUser()
+        
     }
     
     func getUser() {
         ApiManager.shared.getUser().sink { (response) in
             if let response = response.data {
+                print(response.gyms)
                 self.user = response
                 self.userStream.send(())
             }
