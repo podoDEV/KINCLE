@@ -12,6 +12,7 @@
 		1401E44A250C722F001FAF92 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401E449250C722F001FAF92 /* ProfileInfo.swift */; };
 		14292A2A24DE48A700FB8988 /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14292A2924DE48A700FB8988 /* ProblemViewController.swift */; };
 		14292A2C24DE48B000FB8988 /* Gym.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14292A2B24DE48B000FB8988 /* Gym.storyboard */; };
+		1436DC32258D9E3500EC2F14 /* GymTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436DC31258D9E3500EC2F14 /* GymTabViewModel.swift */; };
 		1469D1E72431E2AA00445236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1E62431E2AA00445236 /* AppDelegate.swift */; };
 		1469D1E92431E2AA00445236 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1469D1E82431E2AA00445236 /* SceneDelegate.swift */; };
 		1469D1EE2431E2AA00445236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1469D1EC2431E2AA00445236 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		1401E449250C722F001FAF92 /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfo.swift; sourceTree = "<group>"; };
 		14292A2924DE48A700FB8988 /* ProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemViewController.swift; sourceTree = "<group>"; };
 		14292A2B24DE48B000FB8988 /* Gym.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gym.storyboard; sourceTree = "<group>"; };
+		1436DC31258D9E3500EC2F14 /* GymTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymTabViewModel.swift; sourceTree = "<group>"; };
 		1469D1E32431E2AA00445236 /* KINCLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KINCLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1469D1E62431E2AA00445236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1469D1E82431E2AA00445236 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				14292A2B24DE48B000FB8988 /* Gym.storyboard */,
 				14E7E08024F21B7000B99B78 /* GymTabViewController.swift */,
 				14292A2924DE48A700FB8988 /* ProblemViewController.swift */,
+				1436DC31258D9E3500EC2F14 /* GymTabViewModel.swift */,
 			);
 			path = Gym;
 			sourceTree = "<group>";
@@ -235,8 +238,8 @@
 		14E7E07924F0E20D00B99B78 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
-				14D55DDC250339DC007EFE3E /* MyPage */,
 				140B08F0245D0E850042BDDD /* Gym */,
+				14D55DDC250339DC007EFE3E /* MyPage */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				14DCCC3224A6E9FA0062C028 /* BaseViewController.swift in Sources */,
 				14292A2A24DE48A700FB8988 /* ProblemViewController.swift in Sources */,
 				1469D1FB2431E72700445236 /* MainTabViewController.swift in Sources */,
+				1436DC32258D9E3500EC2F14 /* GymTabViewModel.swift in Sources */,
 				1469D1E72431E2AA00445236 /* AppDelegate.swift in Sources */,
 				14F0F2F3255F7CC20043BD6C /* MyPageViewModel.swift in Sources */,
 				149C0C64244AB0B7005B4E19 /* Response.swift in Sources */,
